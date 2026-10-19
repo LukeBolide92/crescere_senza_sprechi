@@ -20,7 +20,7 @@
   window.WEEKS_DEFAULT = w({
     title: 'Non ci sono consigli per questa settimana',
     lead: 'Questa settimana non è ancora coperta dalla guida. Prova una settimana con consiglio: 4, 8, 12, 16, 21, 28, 32, 36, 40 (gravidanza) oppure 41-52 (primo anno).',
-    img:'https://tse1.mm.bing.net/th/id/OIP.sr7la1eEdRIdzeyQ3mxPOwHaEJ?w=321&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3', imgAlt:'Neonato a riposo', imgCaption:'Neonato a riposo',
+    img:'https://tse1.mm.bing.net/th/id/OIP.sr7la1eEdRIdzeyQ3mxPOwHaEJ?w=321&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3', imgAlt:'Bel neonatino :)', imgCaption:'Bel neonatino :)',
     b1: { label: 'In attesa', badge: 'SSN', title: 'Contenuto in espansione', desc: 'Per ora consulta le settimane con consiglio disponibile nel menu.', codeTitle: '—', codeNote: 'In attesa di aggiornamento.' },
     b2: { label: 'Spesa da rimandare', title: 'Rimanda gli acquisti', desc: 'Se non c\'è un consiglio specifico, il miglior risparmio è aspettare e verificare con il consultorio o il pediatra.',
          points: [ { strong: 'Aspetta', text: 'Nessuna spesa senza consiglio specifico.' }, { strong: 'Verifica', text: 'Consulta il consultorio o il pediatra.' } ] },
