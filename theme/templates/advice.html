@@ -183,7 +183,7 @@
 </div>
 <!-- Visual Anchor: Contextual Maternal Photography -->
 <div class="relative w-full h-44 rounded-2xl overflow-hidden shadow-sm">
-<img class="w-full h-full object-cover" data-alt="Warm natural light portrait of an expectant Italian mother sitting comfortably in an organic linen armchair at home holding an ultrasound picture, warm earth tones, terracotta mug on wooden side table, editorial calm atmosphere, newsreader aesthetic, soft natural daylight, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATx6UHwznkB_MQXFBdVQQSMaXGPWIrUnxdA1WaD47LigB7csZKxmxYvgXvdUbNxTza0YIVWCeeFGrGdWatAjhhyhZ8-BQw0ftRF7dwUi121UTL8X6s4g3neujLPHnJjHok2_WGUhXMzYOQE8pmjiOeNSTpdQwovuMYC7hNOIBTaMC3nMHiVpjo9mqXNa-_iBr6x_ngUTLNkA8d8gO8iZD7jKyBl3DIE-sHY3FaY3IJNHp68RfQS-k1ew"/>
+ <img id="hero-image" class="w-full h-full object-cover" data-alt="Warm natural light portrait of an expectant Italian mother sitting comfortably in an organic linen armchair at home holding an ultrasound picture, warm earth tones, terracotta mug on wooden side table, editorial calm atmosphere, newsreader aesthetic, soft natural daylight, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATx6UHwznkB_MQXFBdVQQSMaXGPWIrUnxdA1WaD47LigB7csZKxmxYvgXvdUbNxTza0YIVWCeeFGrGdWatAjhhyhZ8-BQw0ftRF7dwUi121UTL8X6s4g3neujLPHnJjHok2_WGUhXMzYOQE8pmjiOeNSTpdQwovuMYC7hNOIBTaMC3nMHiVpjo9mqXNa-_iBr6x_ngUTLNkA8d8gO8iZD7jKyBl3DIE-sHY3FaY3IJNHp68RfQS-k1ew"/>
 <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent flex items-end p-3">
 <div class="flex items-center gap-1.5 text-on-primary text-xs">
 <span class="material-symbols-outlined text-[16px]">schedule</span>
@@ -447,7 +447,9 @@
   const wm = isBaby ? (raw - 40) : raw;
   const hasContent = isBaby ? (wm >= 1 && wm <= 12) : (Object.prototype.hasOwnProperty.call(WEEKS, raw));
   const set = function(id, txt) { const el = document.getElementById(id); if (el) el.textContent = txt; };
+  let d;
   if (!hasContent) {
+    d = window.WEEKS_DEFAULT || window.WEEKS['21'] || {title:'Non ci sono consigli', lead:'', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuATx6UHwznkB_QSMaXGPWIrUnxdA1WaD47LigB7csZKxmxYvgXvdUbNxTza0YIVWCeeFGrGdWatAjhhyhZ8-BQw0ftRF7dwUi121UTL8X6s4g3neujLPHnJjHok2_WGUhXMzYOQE8pmjiOeNSTpdQwovuMYC7hNOIBTaMC3nMHiVpjo9mqXNa-_iBr6x_ngUTLNkA8d8gO8iZD7jKyBl3DIE-sHY3FaY3IJNHp68RfQS-k1ew', imgAlt:'Contenuto non disponibile'};
     set('advice-title', 'Non ci sono consigli per questa settimana');
     set('advice-lead', 'Questa settimana non è ancora coperta dalla guida. Prova una settimana con consiglio: 4, 8, 12, 16, 21, 28, 32, 36, 40 (gravidanza) oppure 41-52 (primo anno).');
     set('box1-title', 'In attesa di contenuto');
@@ -455,7 +457,7 @@
     set('box2-title', 'Rimanda gli acquisti');
     set('box2-desc', 'Se non c\'è un consiglio specifico per questa settimana, il risparmio migliore è aspettare e verificare con il consultorio o il pediatra.');
   } else {
-    const d = isBaby ? window.babyInfo(wm) : WEEKS[raw];
+    d = isBaby ? window.babyInfo(wm) : WEEKS[raw];
     set('advice-title', d.title || d.t || '');
     set('advice-lead', d.lead || d.l || '');
     set('box1-title', d.b1t || d.a || '');
@@ -463,6 +465,8 @@
     set('box2-title', d.b2t || d.b || '');
     set('box2-desc', d.b2d || d.bd || '');
   }
+  const imgEl = document.getElementById('hero-image');
+  if (imgEl && d && d.img) { imgEl.src = d.img; imgEl.alt = d.imgAlt || ''; }
 
 </script>
 </body></html>
