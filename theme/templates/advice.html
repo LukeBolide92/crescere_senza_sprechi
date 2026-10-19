@@ -174,12 +174,8 @@
 <span class="material-symbols-outlined text-[14px]">spa</span>
 <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider" id="period-badge-text">Consiglio del Periodo • 21ª Settimana</span>
 </div>
-<h1 id="advice-title" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-snug">
-        La morfologica e le scelte sul passeggino: cosa serve davvero adesso
-      </h1>
-<p id="advice-lead" class="font-body-md text-body-md text-on-surface-variant">
-        A metà del cammino le pressioni commerciali aumentano. Separiamo la serenità degli accertamenti clinici gratuiti dagli acquisti inutilmente precoci.
-      </p>
+<h1 id="advice-title" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-snug"></h1>
+<p id="advice-lead" class="font-body-md text-body-md text-on-surface-variant"></p>
 </div>
 <!-- Visual Anchor: Contextual Maternal Photography -->
 <div class="relative w-full h-44 rounded-2xl overflow-hidden shadow-sm">
@@ -205,9 +201,7 @@
 </div>
 <span id="box1-badge" class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold"></span>
 </div>
-<p id="box1-desc" class="font-body-sm text-body-sm text-on-surface">
-        È l'esame che analizza l'anatomia fetale e la posizione della placenta. Fa parte dei protocolli essenziali garantiti dal Servizio Sanitario Nazionale.
-      </p>
+<p id="box1-desc" class="font-body-sm text-body-sm text-on-surface"></p>
 <div class="bg-surface-container-lowest p-3 rounded-xl flex items-center justify-between shadow-sm">
 <div class="flex items-center gap-2.5">
 <span class="material-symbols-outlined text-primary text-[22px]">receipt_long</span>
@@ -230,9 +224,7 @@
 <h2 id="box2-title" class="font-headline-sm text-headline-sm text-secondary leading-tight">Seggiolone Pappa: NON Comprarlo Adesso!</h2>
 </div>
 </div>
-<p id="box2-desc" class="font-body-sm text-body-sm text-on-surface">
-        I cataloghi premaman spingono per l'acquisto immediato dei seggioloni multifunzione con riduttori nascita. La realtà fisiologica ed economica è un'altra:
-      </p>
+<p id="box2-desc" class="font-body-sm text-body-sm text-on-surface"></p>
 <div class="space-y-2">
 <div class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-2.5 shadow-sm">
 <span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">cancel</span>
@@ -256,9 +248,7 @@
 </div>
 <h2 id="box3-title" class="font-headline-sm text-headline-sm text-on-surface"></h2>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-        Il telaio del passeggino leggero o modulare: anziché ordinare d'impulso sistemi "trio" giganti da 900€, fai questa prova pratica e gratuita:
-      </p>
+<p id="box3-text" class="font-body-sm text-body-sm text-on-surface-variant"></p>
 <div class="p-3 bg-surface-container-low rounded-xl space-y-2">
 <div id="box3-inner" class="flex items-center gap-2 text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">directions_car</span><span id="box3-inner-title"></span></div><p id="box3-inner-text" class="font-body-sm text-body-sm text-on-surface-variant"></p>
 </div>
@@ -438,6 +428,7 @@
   const wm = isBaby ? (raw - 40) : raw;
   const hasContent = isBaby ? (wm >= 1 && wm <= 12) : (Object.prototype.hasOwnProperty.call(WEEKS, raw));
   const set = function(id, txt) { const el = document.getElementById(id); if (el) el.textContent = txt; };
+  const setHTML = function(id, p) { const el = document.getElementById(id); if (el) el.innerHTML = p ? ('<strong>' + p.strong + ':</strong> ' + p.text) : ''; };
   let d;
   if (!hasContent) {
     d = window.WEEKS_DEFAULT || window.WEEKS['21'] || {title:'Non ci sono consigli', lead:'', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuATx6UHwznkB_QSMaXGPWIrUnxdA1WaD47LigB7csZKxmxYvgXvdUbNxTza0YIVWCeeFGrGdWatAjhhyhZ8-BQw0ftRF7dwUi121UTL8X6s4g3neujLPHnJjHok2_WGUhXMzYOQE8pmjiOeNSTpdQwovuMYC7hNOIBTaMC3nMHiVpjo9mqXNa-_iBr6x_ngUTLNkA8d8gO8iZD7jKyBl3DIE-sHY3FaY3IJNHp68RfQS-k1ew', imgAlt:'Contenuto non disponibile'};
