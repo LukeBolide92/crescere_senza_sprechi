@@ -187,7 +187,7 @@
 <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent flex items-end p-3">
 <div class="flex items-center gap-1.5 text-on-primary text-xs">
 <span class="material-symbols-outlined text-[16px]">schedule</span>
-<span class="font-label-sm text-label-sm font-medium">Bambino lungo circa 26 cm • Inizio dei primi movimenti percettibili</span>
+<span id="image-caption" class="font-label-sm text-label-sm font-medium"></span>
 </div>
 </div>
 </div>
@@ -199,11 +199,11 @@
 <span class="material-symbols-outlined text-[20px]">ecg_heart</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider block">Visita Clinica Chiave</span>
+<span id="box1-label" class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider block"></span>
 <h2 id="box1-title" class="font-headline-sm text-headline-sm text-primary leading-tight">Ecografia Morfologica (19ª - 21ª Sett.)</h2>
 </div>
 </div>
-<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold">SSN</span>
+<span id="box1-badge" class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold"></span>
 </div>
 <p id="box1-desc" class="font-body-sm text-body-sm text-on-surface">
         È l'esame che analizza l'anatomia fetale e la posizione della placenta. Fa parte dei protocolli essenziali garantiti dal Servizio Sanitario Nazionale.
@@ -212,8 +212,8 @@
 <div class="flex items-center gap-2.5">
 <span class="material-symbols-outlined text-primary text-[22px]">receipt_long</span>
 <div>
-<p class="font-label-md text-label-md text-on-surface font-semibold">Codice Esenzione Ricetta: <span class="text-primary font-mono font-bold">M21</span></p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Nessun ticket dovuto se prescritto tra 19+0 e 20+6.</p>
+<p id="box1-code-title" class="font-label-md text-label-md text-on-surface font-semibold"></p>
+<p id="box1-code-note" class="font-body-sm text-body-sm text-on-surface-variant"></p>
 </div>
 </div>
 <span class="material-symbols-outlined text-primary text-[20px]">verified</span>
@@ -226,7 +226,7 @@
 <span class="material-symbols-outlined text-[22px]">savings</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Regola Anti-Spreco #21</span>
+<span id="box2-label" class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider"></span>
 <h2 id="box2-title" class="font-headline-sm text-headline-sm text-secondary leading-tight">Seggiolone Pappa: NON Comprarlo Adesso!</h2>
 </div>
 </div>
@@ -237,13 +237,13 @@
 <div class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-2.5 shadow-sm">
 <span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">cancel</span>
 <div class="font-body-sm text-body-sm text-on-surface">
-<strong>Nessun uso prima dei 6 mesi:</strong> Il bimbo non ha il tono posturale per stare seduto fino allo svezzamento. Tenerlo in salotto per 8 mesi ruba spazio vitale.
+<span id="box2-point1"></span>
           </div>
 </div>
 <div class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-2.5 shadow-sm">
 <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
 <div class="font-body-sm text-body-sm text-on-surface">
-<strong>Risparmio immediato:</strong> Trattieni in tasca <strong>150€ – 250€</strong> per le spese realmente indispensabili di fine trimestre.
+<span id="box2-point2"></span>
           </div>
 </div>
 </div>
@@ -254,19 +254,13 @@
 <div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
 <span class="material-symbols-outlined text-[18px]">tune</span>
 </div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Cosa ha senso valutare con calma</h2>
+<h2 id="box3-title" class="font-headline-sm text-headline-sm text-on-surface"></h2>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
         Il telaio del passeggino leggero o modulare: anziché ordinare d'impulso sistemi "trio" giganti da 900€, fai questa prova pratica e gratuita:
       </p>
 <div class="p-3 bg-surface-container-low rounded-xl space-y-2">
-<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
-<span class="material-symbols-outlined text-[18px]">directions_car</span>
-<span>Il Test del Bagagliaio Reale</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-          Visita un negozio fisico o prova il passeggino di un amico direttamente nel portabagagli della tua auto. L'80% delle famiglie cambia il trio dopo soli 5 mesi perché "troppo pesante per il baule".
-        </p>
+<div id="box3-inner" class="flex items-center gap-2 text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">directions_car</span><span id="box3-inner-title"></span></div><p id="box3-inner-text" class="font-body-sm text-body-sm text-on-surface-variant"></p>
 </div>
 </div>
 <!-- Box 4: Checklist Interattiva della Settimana 21 -->
@@ -284,31 +278,28 @@
 <label class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-3 cursor-pointer select-none shadow-sm transition-all hover:bg-surface-container-low">
 <input checked="" class="mt-1 w-5 h-5 accent-[#134231] rounded cursor-pointer task-checkbox" type="checkbox"/>
 <div class="flex-1">
-<span class="font-body-md text-body-md text-on-surface block font-medium">Prenotazione Ecografia Morfologica (M21)</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Verificare la data nei calendari CUP regionali.</span>
+<span id="task-1-t" class="font-body-md text-body-md text-on-surface block font-medium"></span><span id="task-1-d" class="font-body-sm text-body-sm text-on-surface-variant"></span>
 </div>
 </label>
 <!-- Item 2 -->
 <label class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-3 cursor-pointer select-none shadow-sm transition-all hover:bg-surface-container-low">
 <input class="mt-1 w-5 h-5 accent-[#134231] rounded cursor-pointer task-checkbox" type="checkbox"/>
 <div class="flex-1">
-<span class="font-body-md text-body-md text-on-surface block font-medium">Misurare il bagagliaio e le porte dell'ascensore</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Evita acquisti ingombranti che non entrano a casa.</span>
+<span id="task-2-t" class="font-body-md text-body-md text-on-surface block font-medium"></span><span id="task-2-d" class="font-body-sm text-body-sm text-on-surface-variant"></span>
 </div>
 </label>
 <!-- Item 3 -->
 <label class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-3 cursor-pointer select-none shadow-sm transition-all hover:bg-surface-container-low">
 <input class="mt-1 w-5 h-5 accent-[#134231] rounded cursor-pointer task-checkbox" type="checkbox"/>
 <div class="flex-1">
-<span class="font-body-md text-body-md text-on-surface block font-medium">Idratazione della pelle e riposo su fianco sinistro</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Semplice olio di mandorle dolci puro (costo &lt;7€ in farmacia).</span>
+<span id="task-3-t" class="font-body-md text-body-md text-on-surface block font-medium"></span><span id="task-3-d" class="font-body-sm text-body-sm text-on-surface-variant"></span>
 </div>
 </label>
 </div>
 <!-- Download Button Action -->
 <button class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm active:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-[18px]">download</span>
-<span>Scarica Scheda Promemoria Settimana 21 (PDF)</span>
+<span id="download-label"></span>
 </button>
 </div>
 <!-- Box 5: Fonte Ufficiale Ministero / ISS -->
@@ -464,6 +455,26 @@
     set('box1-desc', d.b1d || d.ad || '');
     set('box2-title', d.b2t || d.b || '');
     set('box2-desc', d.b2d || d.bd || '');
+    set('box1-label', (d.b1 && d.b1.label) || '');
+    set('box1-badge', (d.b1 && d.b1.badge) || '');
+    set('box1-code-title', (d.b1 && d.b1.codeTitle) || '');
+    set('box1-code-note', (d.b1 && d.b1.codeNote) || '');
+    set('box2-label', (d.b2 && d.b2.label) || '');
+    set('image-caption', d.imgCaption || '');
+    set('download-label', d.dl || 'Scarica scheda');
+    set('checklist-title', (d.checklist && d.checklist.title) || 'I 3 compiti essenziali');
+    if (d.checklist && d.checklist.items) {
+      d.checklist.items.forEach(function(it, i) {
+        set('task-'+(i+1)+'-t', it.t || '');
+        set('task-'+(i+1)+'-d', it.d || '');
+      });
+    }
+    set('box3-title', (d.b3 && d.b3.title) || '');
+    set('box3-text', (d.b3 && d.b3.text) || '');
+    set('box3-inner-title', (d.b3 && d.b3.boxTitle) || '');
+    set('box3-inner-text', (d.b3 && d.b3.boxText) || '');
+    set('box2-point1', (d.b2 && d.b2.points && d.b2.points[0] && d.b2.points[0].text) || '');
+    set('box2-point2', (d.b2 && d.b2.points && d.b2.points[1] && d.b2.points[1].text) || '');
   }
   const imgEl = document.getElementById('hero-image');
   if (imgEl && d && d.img) { imgEl.src = d.img; imgEl.alt = d.imgAlt || ''; }
