@@ -22,5 +22,8 @@ window.babyInfo = function(m) {
     9: {t:'Il grande cambiamento', l:'Nono mese: nido.', a:'Nido e vaccini', ad:'Piano vaccinale.', b:'Kit nido', bd:'Tasca, cambio, grembiulino ~60 €.'},
     12:{t:'Compleanno', l:'Dodicesimo mese: bilancio.', a:'Bilancio salute', ad:'Verifica tappe.', b:'Secondhand', bd:'Secondhand riduce costi 50%.'}
   };
-  return phases[m] || phases[1];
+  const out = phases[m] || phases[1];
+  out.img = out.img || 'https://lh3.googleusercontent.com/aida-public/AB6AXuATx6UHwznkB_QSMaXGPWIrUnxdA1WaD47LigB7csZKxmxYvgXvdUbNxTza0YIVWCeeFGrGdWatAjhhyhZ8-BQw0ftRF7dwUi121UTL8X6s4g3neujLPHnJjHok2_WGUhXMzYOQE8pmjiOeNSTpdQwovuMYC7hNOIBTaMC3nMHiVpjo9mqXNa-_iBr6x_ngUTLNkA8d8gO8iZD7jKyBl3DIE-sHY3FaY3IJNHp68RfQS-k1ew';
+  out.imgAlt = out.imgAlt || 'Contenuto del primo anno';
+  return out;
 };
