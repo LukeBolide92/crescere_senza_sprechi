@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f5fbf6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 1rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f5fbf6", "outline": "#717974", "on-error": "#ffffff", "primary-container": "#2d5a47", "secondary-fixed-dim": "#ffb68c", "surface-bright": "#f5fbf6", "on-error-container": "#93000a", "primary-fixed-dim": "#a1d1b9", "on-surface": "#171d1a", "surface-container-lowest": "#ffffff", "on-primary-container": "#9fcfb7", "on-primary-fixed-variant": "#214f3d", "tertiary-fixed": "#cde9d9", "on-tertiary-container": "#b1ccbc", "surface-dim": "#d6dbd7", "on-background": "#171d1a", "secondary-container": "#fc934f", "surface": "#f5fbf6", "surface-container-highest": "#dee4df", "surface-variant": "#dee4df", "surface-container-low": "#eff5f0", "secondary-fixed": "#ffdbc9", "inverse-surface": "#2c322f", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#753400", "inverse-on-surface": "#ecf2ed", "on-secondary-fixed": "#321200", "tertiary-container": "#3f574b", "surface-tint": "#3a6753", "primary-fixed": "#bcedd4", "secondary": "#994703", "inverse-primary": "#a1d1b9", "tertiary-fixed-dim": "#b2cdbd", "on-secondary-container": "#6d3000", "on-primary-fixed": "#002115", "primary": "#134231", "on-surface-variant": "#414944", "on-tertiary-fixed": "#082016", "on-tertiary": "#ffffff", "error": "#ba1a1a", "tertiary": "#284035", "on-primary": "#ffffff", "surface-container-high": "#e4eae5", "outline-variant": "#c0c8c2", "surface-container": "#e9efea", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#344c40" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin-mobile": "1.25rem", "margin": "2.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-lg": "1.75rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "3rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Newsreader"], "headline-lg-mobile": ["Newsreader"], "display-lg-mobile": ["Newsreader"], "display-lg": ["Newsreader"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Newsreader"], "headline-sm": ["Newsreader"] }, "fontSize": { "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["26px", { "lineHeight": "34px", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-2 min-w-0"><button aria-label="Torna indietro" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate leading-tight">Selettore Periodo</h1></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex flex-col relative w-full px-margin-mobile pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Privacy & Mission Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<div class="min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Sintonizza il tuo percorso</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+          Nessun account necessario, nessun dato salvato sui nostri server. Il calcolo avviene interamente in locale nel tuo dispositivo.
+        </p>
+</div>
+</div>
+</div>
+<!-- Primary Journey Mode Selector -->
+<div class="space-y-space-xs mb-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block">In quale momento ti trovi?</span>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Option A (Gravidanza - Active default) -->
+<button class="relative text-left p-space-md rounded-xl transition-all shadow-sm bg-primary-container text-on-primary" id="btn-mode-pregnancy" onclick="setMode('pregnancy')" type="button">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">pregnant_woman</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-surface-container-lowest font-medium leading-snug">In dolce attesa</p>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-tight">Gravidanza, monitoraggio settimane</p>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center shadow-sm" id="check-pregnancy">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</div>
+</button>
+<!-- Option B (Bebè già nato) -->
+<button class="relative text-left p-space-md rounded-xl transition-all shadow-sm bg-surface-container text-on-surface" id="btn-mode-baby" onclick="setMode('baby')" type="button">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[24px]">child_friendly</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-medium leading-snug">Il mio bimbo è nato</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">0–12 mesi, tappe di crescita</p>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center" id="check-baby">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</div>
+</button>
+</div>
+</div>
+<!-- Dynamic Calibration Panel: Pregnancy Mode -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md" id="section-pregnancy">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<label class="font-label-md text-label-md text-primary uppercase" for="dpa-input">Data Presunta Parto (DPA)</label>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold">Consigliato</span>
+</div>
+<!-- Date Picker Input Container -->
+<div class="relative bg-surface-container-low rounded-lg p-2.5 mb-3 flex items-center">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface focus:outline-none cursor-pointer" id="dpa-input" onchange="updatePregnancyWeek(this.value)" type="date" value="2025-08-14"/>
+<span class="material-symbols-outlined text-on-surface-variant pointer-events-none absolute right-3">edit_calendar</span>
+</div>
+<!-- Dynamic Calculated Feedback Bubble -->
+<div class="bg-tertiary-fixed rounded-lg p-3 flex items-center gap-2.5 mb-3" id="pregnancy-calculated-badge">
+<span class="material-symbols-outlined text-tertiary text-[20px]">maps_ar</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-sm text-on-tertiary-fixed uppercase font-bold">Stato Calcolato</p>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold leading-tight" id="calc-summary-text">
+          21ª settimana di gestazione • 2° Trimestre
+        </p>
+</div>
+</div>
+<!-- Alternative Calculation Toggle -->
+<button class="flex items-center gap-1.5 text-primary text-left py-1 hover:opacity-80 transition-opacity" onclick="toggleAltCalc()" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span class="font-label-md text-label-md underline underline-offset-2">Non conosci la DPA? Calcola dall'ultima mestruazione</span>
+</button>
+<!-- Hidden Sub-Form for LMP Calculation -->
+<div class="hidden mt-3 pt-3 bg-surface-container-low rounded-lg p-3" id="alt-calc-form">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Data d'inizio ultimo ciclo mestruale:</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-lowest rounded-lg p-2 font-body-sm text-on-surface focus:outline-none" id="lmp-input" type="date"/>
+<button class="bg-primary text-on-primary px-3 rounded-lg font-label-md text-label-md shadow-sm" onclick="computeFromLMP()" type="button">
+          Calcola
+        </button>
+</div>
+</div>
+</div>
+<!-- Dynamic Calibration Panel: Baby Age Mode (hidden initially) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md" id="section-baby">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cake</span>
+<label class="font-label-md text-label-md text-primary uppercase" for="birth-input">Data di nascita del bebè</label>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold">0–12 Mesi</span>
+</div>
+<div class="relative bg-surface-container-low rounded-lg p-2.5 mb-3 flex items-center">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface focus:outline-none cursor-pointer" id="birth-input" onchange="updateBabyAge(this.value)" type="date"/>
+<span class="material-symbols-outlined text-on-surface-variant pointer-events-none absolute right-3">event</span>
+</div>
+<div class="bg-tertiary-fixed rounded-lg p-3 flex items-center gap-2.5" id="baby-calculated-badge">
+<span class="material-symbols-outlined text-tertiary text-[20px]">child_care</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-sm text-on-tertiary-fixed uppercase font-bold">Stato Calcolato</p>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold leading-tight" id="baby-summary-text">
+          Inserisci la data di nascita per calcolare il mese esatto
+        </p>
+</div>
+</div>
+</div>
+<!-- Priority Selection (Anti-Waste Focus) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Cosa ti serve maggiormente ora?</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+      Personalizza il feed con guide mirate (facoltativo):
+    </p>
+<div class="space-y-2" id="priority-options">
+<!-- Option 1: Risparmio (Default active) -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-colors" onclick="selectPriority(this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">savings</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Massimo Risparmio &amp; Anti-Sprechi</span>
+</div>
+<div class="priority-radio w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-on-primary"></div>
+</div>
+</label>
+<!-- Option 2: Sanità SSN -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-colors opacity-80" onclick="selectPriority(this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[16px]">clinical_notes</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Scadenze Sanitarie, Visite &amp; SSN</span>
+</div>
+<div class="priority-radio w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+</label>
+<!-- Option 3: Equilibrio pratico -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-colors opacity-80" onclick="selectPriority(this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">spa</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Equilibrio Emotivo &amp; Pratico</span>
+</div>
+<div class="priority-radio w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Quick Shortcut Carousel: 8 Specific Phases -->
+<div class="mb-space-lg">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Oppure salta a una fase specifica</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">8 Tappe</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('1° Trimestre (1-13 sett.)')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">Settimane 1–13</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">1° Trimestre</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-primary-container text-on-primary shadow-sm transition-colors" onclick="selectDirectStage('2° Trimestre (14-27 sett.)')" type="button">
+<span class="font-label-sm text-label-sm block text-on-primary-container">Settimane 14–27</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">2° Trimestre (Attivo)</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('3° Trimestre (28-40 sett.)')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">Settimane 28–40</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">3° Trimestre &amp; Nascita</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('Neonato (0-1 mese)')')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">I Primi 30 Giorni</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">Neonato (0–1 Mese)</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('Primi Sorrisi (2-3 mesi)')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">Prime Scoperte</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">2–3 Mesi</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('Interazione (4-5 mesi)')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">Verso lo Svezzamento</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">4–5 Mesi</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('Svezzamento &amp; Gioco (6-8 mesi)')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">Pappe &amp; Movimento</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">6–8 Mesi</span>
+</button>
+<button class="stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors" onclick="selectDirectStage('Primi Passi (9-12 mesi)')" type="button">
+<span class="font-label-sm text-label-sm block opacity-70">Autonomia &amp; Compleanno</span>
+<span class="font-body-sm text-body-sm font-semibold truncate block">9–12 Mesi</span>
+</button>
+</div>
+</div>
+<!-- Primary Sticky Execution Action -->
+<div class="sticky bottom-2 z-20 pt-2">
+<button class="w-full bg-primary text-on-primary py-3.5 px-space-md rounded-xl shadow-lg flex items-center justify-center gap-2 hover:bg-primary-container active:scale-[0.99] transition-all" onclick="applyAndProceed()" type="button">
+<span class="font-headline-sm text-headline-sm font-medium">Applica e Mostra i Contenuti</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-on-surface-variant mt-2">
+      Puoi ricalibrare o resettare questa preferenza in ogni istante.
+    </p>
+</div>
+</div>
+<script>
+  let currentMode = 'pregnancy';
+
+  function setMode(mode) {
+    currentMode = mode;
+    const btnPreg = document.getElementById('btn-mode-pregnancy');
+    const btnBaby = document.getElementById('btn-mode-baby');
+    const checkPreg = document.getElementById('check-pregnancy');
+    const checkBaby = document.getElementById('check-baby');
+    const secPreg = document.getElementById('section-pregnancy');
+    const secBaby = document.getElementById('section-baby');
+
+    if (mode === 'pregnancy') {
+      btnPreg.className = 'relative text-left p-space-md rounded-xl transition-all shadow-sm bg-primary-container text-on-primary';
+      checkPreg.className = 'w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center shadow-sm';
+      checkPreg.innerHTML = '<span class="material-symbols-outlined text-[18px] font-bold">check</span>';
+
+      btnBaby.className = 'relative text-left p-space-md rounded-xl transition-all shadow-sm bg-surface-container text-on-surface';
+      checkBaby.className = 'w-7 h-7 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center';
+      checkBaby.innerHTML = '<span class="material-symbols-outlined text-[18px] font-bold">check</span>';
+
+      secPreg.classList.remove('hidden');
+      secBaby.classList.add('hidden');
+    } else {
+      btnBaby.className = 'relative text-left p-space-md rounded-xl transition-all shadow-sm bg-primary-container text-on-primary';
+      checkBaby.className = 'w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center shadow-sm';
+      checkBaby.innerHTML = '<span class="material-symbols-outlined text-[18px] font-bold">check</span>';
+
+      btnPreg.className = 'relative text-left p-space-md rounded-xl transition-all shadow-sm bg-surface-container text-on-surface';
+      checkPreg.className = 'w-7 h-7 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center';
+      checkPreg.innerHTML = '<span class="material-symbols-outlined text-[18px] font-bold">check</span>';
+
+      secBaby.classList.remove('hidden');
+      secPreg.classList.add('hidden');
+    }
+  }
+
+  function updatePregnancyWeek(dateVal) {
+    if (!dateVal) return;
+    const dpa = new Date(dateVal);
+    const today = new Date();
+    const diffTime = dpa - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const totalGestationalDays = 280;
+    const currentDays = Math.max(0, Math.min(280, totalGestationalDays - diffDays));
+    const week = Math.floor(currentDays / 7) + 1;
+
+    let trimester = "1° Trimestre";
+    if (week >= 14 && week <= 27) trimester = "2° Trimestre";
+    if (week > 27) trimester = "3° Trimestre";
+
+    document.getElementById('calc-summary-text').innerText = week + 'ª settimana di gestazione • ' + trimester;
+  }
+
+  function updateBabyAge(dateVal) {
+    if (!dateVal) return;
+    const birth = new Date(dateVal);
+    const today = new Date();
+    const diffMonths = (today.getFullYear() - birth.getFullYear()) * 12 + (today.getMonth() - birth.getMonth());
+    const validMonths = Math.max(0, Math.min(12, diffMonths));
+    document.getElementById('baby-summary-text').innerText = 'Il bimbo ha circa ' + validMonths + ' mesi • Fase di ' + (validMonths < 6 ? 'Latte & Primi Giochi' : 'Svezzamento Attivo');
+  }
+
+  function toggleAltCalc() {
+    const el = document.getElementById('alt-calc-form');
+    el.classList.toggle('hidden');
+  }
+
+  function computeFromLMP() {
+    const lmpVal = document.getElementById('lmp-input').value;
+    if (!lmpVal) return;
+    const lmp = new Date(lmpVal);
+    // Naegele's rule: +280 days
+    const dpa = new Date(lmp.getTime() + (280 * 24 * 60 * 60 * 1000));
+    const y = dpa.getFullYear();
+    const m = String(dpa.getMonth() + 1).padStart(2, '0');
+    const d = String(dpa.getDate()).padStart(2, '0');
+    const formatted = y + '-' + m + '-' + d;
+    const dpaInput = document.getElementById('dpa-input');
+    dpaInput.value = formatted;
+    updatePregnancyWeek(formatted);
+    toggleAltCalc();
+  }
+
+  function selectPriority(selectedLabel) {
+    const options = document.querySelectorAll('#priority-options label');
+    options.forEach(opt => {
+      opt.classList.add('opacity-80');
+      const radio = opt.querySelector('.priority-radio');
+      radio.className = 'priority-radio w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0';
+      radio.firstElementChild.className = 'w-2 h-2 rounded-full bg-transparent';
+    });
+    selectedLabel.classList.remove('opacity-80');
+    const activeRadio = selectedLabel.querySelector('.priority-radio');
+    activeRadio.className = 'priority-radio w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0';
+    activeRadio.firstElementChild.className = 'w-2 h-2 rounded-full bg-on-primary';
+  }
+
+  function selectDirectStage(stageName) {
+    const buttons = document.querySelectorAll('.stage-btn');
+    buttons.forEach(btn => {
+      btn.className = 'stage-btn text-left p-2.5 rounded-lg bg-surface-container shadow-sm hover:bg-primary-container hover:text-on-primary transition-colors';
+    });
+    event.currentTarget.className = 'stage-btn text-left p-2.5 rounded-lg bg-primary-container text-on-primary shadow-sm transition-colors';
+    
+    // Feedback in calculated state
+    if (stageName.includes('Trimestre')) {
+      setMode('pregnancy');
+      document.getElementById('calc-summary-text').innerText = 'Fase forzata: ' + stageName;
+    } else {
+      setMode('baby');
+      document.getElementById('baby-summary-text').innerText = 'Fase forzata: ' + stageName;
+    }
+  }
+
+  function applyAndProceed() {
+    const feedbackToast = document.createElement('div');
+    feedbackToast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full shadow-lg text-body-sm font-medium z-50 animate-bounce';
+    feedbackToast.innerText = 'Periodo impostato con successo!';
+    document.body.appendChild(feedbackToast);
+    setTimeout(() => {
+      feedbackToast.remove();
+      if (window.history.length > 1) {
+        window.history.back();
+      }
+    }, 1200);
+  }
+</script></main></body></html>

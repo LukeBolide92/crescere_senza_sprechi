@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "name": "Passeggino modulare leggero 0+",
+      "category": "seggiolini",
+      "price_range": "280-450 EUR",
+      "price_verified_il": "15/01/2025",
+      "normative": "EN 1888-2:2018",
+      "sources": ["Ministero della Salute", "ISS"]
+    },
+    {
+      "name": "Ovetto Gruppo 0+",
+      "category": "seggiolini",
+      "price_range": "90-160 EUR",
+      "price_verified_il": "15/01/2025",
+      "normative": "ECE R44",
+      "sources": ["SIPPS"]
+    }
+  ]
+}

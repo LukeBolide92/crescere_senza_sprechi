@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f5fbf6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 1rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f5fbf6", "outline": "#717974", "on-error": "#ffffff", "primary-container": "#2d5a47", "secondary-fixed-dim": "#ffb68c", "surface-bright": "#f5fbf6", "on-error-container": "#93000a", "primary-fixed-dim": "#a1d1b9", "on-surface": "#171d1a", "surface-container-lowest": "#ffffff", "on-primary-container": "#9fcfb7", "on-primary-fixed-variant": "#214f3d", "tertiary-fixed": "#cde9d9", "on-tertiary-container": "#b1ccbc", "surface-dim": "#d6dbd7", "on-background": "#171d1a", "secondary-container": "#fc934f", "surface": "#f5fbf6", "surface-container-highest": "#dee4df", "surface-variant": "#dee4df", "surface-container-low": "#eff5f0", "secondary-fixed": "#ffdbc9", "inverse-surface": "#2c322f", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#753400", "inverse-on-surface": "#ecf2ed", "on-secondary-fixed": "#321200", "tertiary-container": "#3f574b", "surface-tint": "#3a6753", "primary-fixed": "#bcedd4", "secondary": "#994703", "inverse-primary": "#a1d1b9", "tertiary-fixed-dim": "#b2cdbd", "on-secondary-container": "#6d3000", "on-primary-fixed": "#002115", "primary": "#134231", "on-surface-variant": "#414944", "on-tertiary-fixed": "#082016", "on-tertiary": "#ffffff", "error": "#ba1a1a", "tertiary": "#284035", "on-primary": "#ffffff", "surface-container-high": "#e4eae5", "outline-variant": "#c0c8c2", "surface-container": "#e9efea", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#344c40" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin-mobile": "1.25rem", "margin": "2.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-lg": "1.75rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "3rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Newsreader"], "headline-lg-mobile": ["Newsreader"], "display-lg-mobile": ["Newsreader"], "display-lg": ["Newsreader"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Newsreader"], "headline-sm": ["Newsreader"] }, "fontSize": { "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["26px", { "lineHeight": "34px", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-2 min-w-0"><button aria-label="Torna indietro" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate leading-tight">Dettaglio Guida</h1></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex flex-col relative w-full px-margin-mobile pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Context & Badges Hub -->
+<div class="flex flex-col gap-3 pt-2 mb-6">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+        2° e 3° Trimestre
+      </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+        6 min lettura
+      </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        Indipendente al 100%
+      </span>
+</div>
+<!-- Editorial Disclosure Statement -->
+<div class="bg-surface-container-low rounded-xl p-3.5 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Trasparenza Editoriale</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Nessun compenso da marchi di puericultura. I test e le stime sui costi derivano dall'osservazione reale di oltre 350 famiglie italiane e dai dati di sicurezza ufficiali.
+        </p>
+</div>
+</div>
+</div>
+<!-- Narrative Lead Section with Image Placement -->
+<div class="flex flex-col gap-4 mb-7">
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up cozy photography of a sustainable modern baby stroller frame parked inside a bright warm Scandinavian Italian apartment living room. Soft natural daylight from large windows, calm sage green pillows, neutral wooden floors, minimal and reassuring atmosphere without clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-hzNwFET58TNhRTPdlra84MVgawHTIwC-DUZm7SIpW_P2jmxMw_daozPn9ShtYPxNylkkjgl9xJ447Tt9D3qFAB2oLgf3dmOEkuf5ehj1j_B8sVmBQhRZx66gDFawBX7isuOxutgBDECzCU7hHywhnh8UE6LoBMTihDcihJ0huJXWAp-o7c8XElZFruTdY93alDeBsRIrgJv6vpN5N1v_0YZO9WF20Br5eSF11m14ZBZfNXwEpR62sw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4">
+<p class="font-headline-sm text-headline-sm text-on-primary">
+          Guida al Passeggino: la spesa senza rimpianti
+        </p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+      Il trio è spesso il primo acquisto impulsivo per i futuri genitori. Ma quanto viene realmente sfruttato ogni singolo pezzo tra navicella, ovetto e telaio pesante? Confrontiamo le tre strade concrete.
+    </p>
+</div>
+<!-- Swipeable Horizontal Cards Indicator -->
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_horiz</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Confronto Soluzioni</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Scorri le schede (1/3)</span>
+</div>
+<!-- Comparison Carousel -->
+<div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-margin-mobile px-margin-mobile mb-6" id="cardsCarousel">
+<!-- Card 1: Trio Tradizionale -->
+<div class="snap-center shrink-0 w-[84vw] max-w-[340px] bg-surface-container-low rounded-xl p-5 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-outline-variant"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-2 pt-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">Classico</span>
+<span class="font-label-sm text-label-sm text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Spesso abbandonato
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Trio Tradizionale</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Navicella + Ovetto base + Telaio standard con seduta passeggino reversibile.</p>
+<!-- Metrics -->
+<div class="flex flex-col gap-2 mb-5">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">scale</span> Peso telaio
+            </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">12 – 14.5 kg</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">payments</span> Costo medio
+            </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">650€ – 1.250€</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">timer</span> Longevità reale
+            </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">4-7 mesi effettivi</span>
+</div>
+</div>
+</div>
+<!-- Verdict Banner -->
+<div class="p-3 rounded-lg bg-error-container text-on-error-container">
+<p class="font-label-sm text-label-sm font-semibold uppercase mb-0.5">Il Verdetto della Guida</p>
+<p class="font-body-sm text-body-sm leading-snug">
+          Ingombrante nei bagagliai cittadini e sulle rampe di scale. Il 73% dei genitori passa a un passeggino leggero entro il 6° mese.
+        </p>
+</div>
+</div>
+<!-- Card 2: Modulare Leggero Omologato 0+ -->
+<div class="snap-center shrink-0 w-[84vw] max-w-[340px] bg-surface-container-lowest rounded-xl p-5 flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-2 pt-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span> Scelta Consigliata
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Omologato 0+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Modulare Leggero 0+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Schienale completamente reclinabile a 175° con riduttore ergonomico da nascita.</p>
+<!-- Metrics -->
+<div class="flex flex-col gap-2 mb-5">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">scale</span> Peso telaio
+            </span>
+<span class="font-label-md text-label-md text-primary font-semibold">6.2 – 7.8 kg</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">payments</span> Costo medio
+            </span>
+<span class="font-label-md text-label-md text-primary font-semibold">280€ – 450€</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span> Longevità reale
+            </span>
+<span class="font-label-md text-label-md text-primary font-semibold">Dalla nascita a 4 anni</span>
+</div>
+</div>
+</div>
+<!-- Verdict Banner -->
+<div class="p-3 rounded-lg bg-primary text-on-primary">
+<p class="font-label-sm text-label-sm font-semibold uppercase text-primary-fixed mb-0.5">Il Verdetto della Guida</p>
+<p class="font-body-sm text-body-sm leading-snug">
+          Acquisto unico ad alto rendimento. Si chiude con una mano, entra in cappelliera aereo e salva le schiene dei genitori.
+        </p>
+</div>
+</div>
+<!-- Card 3: Usato Rigenerato -->
+<div class="snap-center shrink-0 w-[84vw] max-w-[340px] bg-surface-container-low rounded-xl p-5 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-2 pt-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Zero Sprechi</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">-60% CO2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Usato Rigenerato</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Modelli di marchi premium revisionati, igienizzati e con meccaniche integre.</p>
+<!-- Metrics -->
+<div class="flex flex-col gap-2 mb-5">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">scale</span> Peso medio
+            </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Variabile (6-11 kg)</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">payments</span> Spesa tipica
+            </span>
+<span class="font-label-md text-label-md text-secondary font-semibold">160€ – 280€</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">recycling</span> Circolarità
+            </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rivendibile a pari valore</span>
+</div>
+</div>
+</div>
+<!-- Verdict Banner -->
+<div class="p-3 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<p class="font-label-sm text-label-sm font-semibold uppercase text-secondary mb-0.5">Il Verdetto della Guida</p>
+<p class="font-body-sm text-body-sm leading-snug">
+          Miglior rapporto qualità/costo se controllato con la nostra checklist. I materiali top resistono ad almeno 3 bimbi.
+        </p>
+</div>
+</div>
+</div>
+<!-- Medical & Safety Accordions -->
+<div class="flex flex-col gap-3 mb-8">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Standard Clinici e Sicurezza</h2>
+</div>
+<!-- Accordion 1: Regola delle 2 ore -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-200" id="accordionRule">
+<button class="w-full flex items-center justify-between p-4 text-left" onclick="toggleAccordion('contentRule', 'iconRule')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">access_time</span>
+</div>
+<div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface">La Regola delle 2 ore per l'Ovetto</h3>
+<span class="font-label-sm text-label-sm text-outline">Linee guida pediatriche posturali</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="iconRule">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 bg-surface-container-lowest" id="contentRule">
+<div class="p-3.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm leading-relaxed space-y-2">
+<p>
+            L'ovetto (Gruppo 0+) è un dispositivo concepito prioritariamente per la <strong>sicurezza da impatto in auto</strong>, non per il riposo continuativo del neonato.
+          </p>
+<p>
+            La postura semi-seduta nei primi 4 mesi può favorire la <em>desaturazione di ossigeno</em> e la flessione della testa sul torace se prolungata. Se utilizzi il telaio leggero con adattatori ovetto per brevi spostamenti, fai soste e distendi il neonato ogni 90-120 minuti.
+          </p>
+<div class="flex items-center gap-2 pt-1 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">info</span>
+            Fonte: Società Italiana di Pediatria Preventiva e Sociale (SIPPS)
+          </div>
+</div>
+</div>
+</div>
+<!-- Accordion 2: Normativa EN 1888-2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-all duration-200" id="accordionNorm">
+<button class="w-full flex items-center justify-between p-4 text-left" onclick="toggleAccordion('contentNorm', 'iconNorm')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface">Normativa Europea EN 1888-2</h3>
+<span class="font-label-sm text-label-sm text-outline">Differenza tra limite 15kg e 22kg</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="iconNorm">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 bg-surface-container-lowest" id="contentNorm">
+<div class="p-3.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm leading-relaxed space-y-2">
+<p>
+            Dal 2019, la revisione normativa <strong>EN 1888-2:2018</strong> certifica la tenuta strutturale del passeggino fino a <strong>22 kg</strong> (circa 4 anni di età), rispetto al precedente limite di 15 kg (circa 3 anni) della norma base EN 1888-1.
+          </p>
+<p>
+            Se compri un passeggino leggero o usato, verifica sull'etichetta metallica o tessile sotto il poggiapiedi la dicitura esplicita <em>"EN 1888-2"</em> per garantire un telaio rinforzato e cuscinetti a sfera capaci di reggere carrelli spesa o bimbi più grandicelli senza cedimenti asse.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Checklist: I 5 controlli prima di comprare usato -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm mb-6">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Acquisto Consapevole</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">I 5 Controlli dell'Usato</h2>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary-fixed px-2.5 py-1 rounded-full text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+<span class="font-label-md text-label-md font-bold" id="checkCounter">0/5</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+      Tocca i punti mentre verifichi il passeggino di seconda mano dal vivo o in videochiamata con il venditore.
+    </p>
+<!-- Checklist Elements -->
+<div class="flex flex-col gap-2.5" id="checklistContainer">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors active:bg-surface-container">
+<input class="mt-0.5 h-5 w-5 rounded accent-primary text-on-primary shrink-0 cursor-pointer" onchange="updateChecklist(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">1. Meccanismo freno a pedale</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Attivalo e prova a spingere con forza. Le due ruote posteriori devono bloccarsi all'istante senza slittare.</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors active:bg-surface-container">
+<input class="mt-0.5 h-5 w-5 rounded accent-primary text-on-primary shrink-0 cursor-pointer" onchange="updateChecklist(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">2. Cintura di sicurezza a 5 punti</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">La fibbia centrale deve scattare con un "click" netto e non aprirsi tirando gli spallacci verso l'alto.</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors active:bg-surface-container">
+<input class="mt-0.5 h-5 w-5 rounded accent-primary text-on-primary shrink-0 cursor-pointer" onchange="updateChecklist(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">3. Snodi del telaio e gioco laterale</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Impugna il maniglione e fai oscillare il telaio a destra e sinistra. Non devono esserci cigolii metallici o perni lenti.</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors active:bg-surface-container">
+<input class="mt-0.5 h-5 w-5 rounded accent-primary text-on-primary shrink-0 cursor-pointer" onchange="updateChecklist(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">4. Sfoderabilità e stato tessuti</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Accertati che tutte le parti a contatto col bimbo siano lavabili in lavatrice e prive di aloni da umidità (muffe).</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors active:bg-surface-container">
+<input class="mt-0.5 h-5 w-5 rounded accent-primary text-on-primary shrink-0 cursor-pointer" onchange="updateChecklist(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">5. Apertura e chiusura a una mano</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Esegui l'apertura tenendo in mente che spesso avrai il neonato in braccio sull'altro fianco.</span>
+</div>
+</label>
+</div>
+<!-- Feedback Message on 5/5 completed -->
+<div class="hidden mt-4 p-3.5 bg-primary-fixed text-on-primary-fixed rounded-lg text-center font-label-md text-label-md" id="checklistCompleteBanner">
+      Ottimo lavoro! Questo passeggino supera i criteri di sicurezza essenziali.
+    </div>
+</div>
+<!-- Editorial Card: Secondo Figlio e Circolarità -->
+<div class="bg-surface-container-low rounded-xl p-4 flex gap-4 items-center mb-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Editorial detail of a young mother folding an ultra-compact lightweight stroller in an urban park in Milan, candid documentary style, soft warm light, realistic parenting moment without stress, warm earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg0fsIDSfdxuFgx8lJQ8TmGBQdEL7RUV8DOtiPdWumKgTMMJbqtHpNLniC0MPYeZChxJblOQkI1q2Ce7qJ75cxCwCJT4VjGAcGemfyEuR9mW1qOZyxhlRYgpwQvYgts_O303EF2OPBXXidx6O4UVnsOlDa1Zc3sHuTEdhRaornkKFNZksViHGvB-B8WOLfX2Gu426VPp1qQI5o76X-RA5eYg350Z4TWEesjJFEpHLdoTk-I88kfmpvpA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">E per il secondo figlio?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+        La pedana con ruote da agganciare al passeggino leggero batte il passeggino gemellare nel 90% delle famiglie con differenza di almeno 2 anni.
+      </p>
+</div>
+</div>
+<!-- Sticky Mobile Action Footer -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md pb-safe pt-2 px-margin-mobile shadow-[0_-4px_16px_rgba(23,29,26,0.06)]">
+<div class="max-w-md mx-auto flex items-center gap-2 py-1">
+<!-- Primary Action: Scarica Vademecum -->
+<button class="flex-1 min-h-[48px] bg-primary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 px-4 shadow-sm hover:opacity-95 active:scale-[0.98] transition-transform" id="pdfBtn" onclick="triggerPdfDownload()" type="button">
+<span class="material-symbols-outlined text-[19px]">download</span>
+<span>Scarica Vademecum PDF</span>
+</button>
+<!-- Secondary Icon Action: Condividi con Partner -->
+<button aria-label="Condividi vademecum con il partner" class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-transform shrink-0" onclick="shareArticle()" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+  function toggleAccordion(contentId, iconId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    if (!content || !icon) return;
+
+    const isHidden = content.classList.contains('hidden');
+    if (isHidden) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function updateChecklist(checkbox) {
+    const container = document.getElementById('checklistContainer');
+    const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+    let checkedCount = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked) checkedCount++;
+    });
+
+    const counter = document.getElementById('checkCounter');
+    if (counter) {
+      counter.textContent = checkedCount + '/5';
+    }
+
+    const banner = document.getElementById('checklistCompleteBanner');
+    if (banner) {
+      if (checkedCount === 5) {
+        banner.classList.remove('hidden');
+      } else {
+        banner.classList.add('hidden');
+      }
+    }
+  }
+
+  function triggerPdfDownload() {
+    const btn = document.getElementById('pdfBtn');
+    if (!btn) return;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[19px]">progress_activity</span><span>Preparazione PDF...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[19px]">check_circle</span><span>Scaricato con successo</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2500);
+    }, 1200);
+  }
+
+  function shareArticle() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Guida al Passeggino: Trio vs Leggero vs Usato',
+        text: 'Confronto indipendente per genitori: come evitare acquisti impulsivi.',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copiato negli appunti per la condivisione con il tuo partner!');
+    }
+  }
+</script></main></body></html>

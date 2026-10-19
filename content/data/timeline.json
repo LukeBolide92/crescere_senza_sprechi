@@ -1,0 +1,13 @@
+{
+  "phases": [
+    {"id": 1, "name": "Test Positivo", "weeks": "0-4", "kind": "gravidanza"},
+    {"id": 2, "name": "1° Trimestre", "weeks": "1-13", "kind": "gravidanza"},
+    {"id": 3, "name": "2° Trimestre", "weeks": "14-27", "kind": "gravidanza"},
+    {"id": 4, "name": "3° Trimestre", "weeks": "28-40", "kind": "gravidanza"},
+    {"id": 5, "name": "Neonato 0-1 mese", "weeks": "0-4", "kind": "neonato"},
+    {"id": 6, "name": "2-3 mesi", "weeks": "5-13", "kind": "neonato"},
+    {"id": 7, "name": "4-6 mesi", "weeks": "14-26", "kind": "neonato"},
+    {"id": 8, "name": "7-9 mesi", "weeks": "27-39", "kind": "neonato"},
+    {"id": 9, "name": "10-12 mesi", "weeks": "40-52", "kind": "neonato"}
+  ]
+}
