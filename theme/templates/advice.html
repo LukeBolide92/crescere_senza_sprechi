@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Advice Hub | Crescere Senza Sprechi</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#bcedd4", "on-primary-fixed-variant": "#214f3d", "surface-dim": "#d6dbd7", "inverse-on-surface": "#ecf2ed", "surface-container-lowest": "#ffffff", "secondary-container": "#fc934f", "error": "#ba1a1a", "secondary": "#994703", "on-error-container": "#93000a", "outline": "#717974", "secondary-fixed-dim": "#ffb68c", "surface-container-high": "#e4eae5", "outline-variant": "#c0c8c2", "primary-container": "#2d5a47", "on-tertiary": "#ffffff", "inverse-surface": "#2c322f", "surface-variant": "#dee4df", "error-container": "#ffdad6", "surface-tint": "#3a6753", "surface-container": "#e9efea", "tertiary-container": "#3f574b", "on-primary": "#ffffff", "on-surface": "#171d1a", "inverse-primary": "#a1d1b9", "on-secondary": "#ffffff", "on-secondary-fixed": "#321200", "on-error": "#ffffff", "on-secondary-container": "#6d3000", "on-secondary-fixed-variant": "#753400", "on-surface-variant": "#414944", "surface-container-highest": "#dee4df", "on-primary-container": "#9fcfb7", "on-primary-fixed": "#002115", "background": "#f5fbf6", "primary-fixed-dim": "#a1d1b9", "secondary-fixed": "#ffdbc9", "surface": "#f5fbf6", "tertiary-fixed-dim": "#b2cdbd", "on-background": "#171d1a", "on-tertiary-container": "#b1ccbc", "surface-bright": "#f5fbf6", "tertiary": "#284035", "primary": "#134231", "tertiary-fixed": "#cde9d9", "on-tertiary-fixed": "#082016", "on-tertiary-fixed-variant": "#344c40", "surface-container-low": "#eff5f0" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "3rem", "margin-mobile": "1.25rem", "margin": "2.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-lg": "1.75rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, fontFamily: { "headline-sm": ["Newsreader"], "display-lg-mobile": ["Newsreader"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-lg": ["Newsreader"], "headline-lg": ["Newsreader"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Newsreader"], "headline-md": ["Newsreader"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["26px", { "lineHeight": "34px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } #timeline-drawer:checked ~ #drawer-panel { transform: translateX(0); } #timeline-drawer:checked ~ #drawer-backdrop { opacity: 1; pointer-events: auto; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen relative flex flex-col"><input class="hidden peer" id="timeline-drawer" type="checkbox"/><label class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" for="timeline-drawer" id="drawer-backdrop"></label><aside class="fixed top-0 left-0 bottom-0 w-[84%] max-w-[340px] z-50 bg-surface-bright flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.08)] transform -translate-x-full transition-transform duration-300 ease-out pt-safe pb-safe" id="drawer-panel"><div class="h-16 px-gutter-mobile flex items-center justify-between bg-surface-bright"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[22px]">spa</span><span class="font-headline-sm text-headline-sm text-primary">Cronologia Fasi</span></div><label class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors cursor-pointer" for="timeline-drawer"><span class="material-symbols-outlined text-[22px]">close</span></label></div><div class="flex-1 overflow-y-auto px-margin-mobile py-space-sm space-y-space-md"><div class="space-y-space-xs"><div class="px-2 py-1 flex items-center gap-1.5 text-secondary"><span class="material-symbols-outlined text-[16px]">pregnant_woman</span><span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Gravidanza (Settimane 1 - 40)</span></div><div class="grid grid-cols-5 gap-1.5 p-1 bg-surface-container-low rounded-xl"><a class="h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" data-path="advice-hub" href="#">S12</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S13</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S14</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S15</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S16</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S20</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S24</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S28</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S32</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S36</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S37</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S38</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S39</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">S40</a><a class="h-10 flex items-center justify-center rounded-lg text-primary font-label-md text-label-md" data-path="advice-hub" href="#">Tutte</a></div></div><div class="space-y-space-xs"><div class="px-2 py-1 flex items-center gap-1.5 text-primary"><span class="material-symbols-outlined text-[16px]">child_care</span><span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Primi 12 Mesi del Bambino</span></div><div class="grid grid-cols-4 gap-2 p-1 bg-surface-container-low rounded-xl"><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 1</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 2</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 3</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 4</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 5</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 6</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">Mese 9</a><a class="h-10 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" data-path="advice-hub" href="#">1 Anno</a></div></div><div class="p-3 bg-surface-container rounded-xl flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[20px] shrink-0">verified</span><p class="font-body-sm text-body-sm text-on-surface-variant">Ogni settimana è allineata con i protocolli clinici ISS e Ministero della Salute.</p></div></div></aside><header class="fixed top-0 w-full z-40 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-2"><label class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors cursor-pointer" for="timeline-drawer"><span class="material-symbols-outlined text-[24px]">menu</span></label><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Crescere Senza Sprechi</span><span class="font-label-sm text-label-sm text-on-surface-variant">Guida Consapevole</span></div></div><div class="flex items-center gap-2"><div class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center gap-1 shadow-sm"><span class="material-symbols-outlined text-[14px]">schedule</span><span class="font-label-sm text-label-sm" id="header-week-badge">Sett. 12</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Local Left Drawer Trigger & Timeline Controller -->
+<input class="hidden peer/nav" id="local-nav-drawer" type="checkbox"/>
+<!-- Backdrop for Left Navigation Drawer -->
+<label class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 peer-checked/nav:opacity-100 peer-checked/nav:pointer-events-auto" for="local-nav-drawer"></label>
+<!-- Left Navigation Drawer Panel -->
+<aside class="fixed top-0 left-0 bottom-0 w-[86%] max-w-[340px] z-50 bg-surface-bright flex flex-col shadow-xl transform -translate-x-full transition-transform duration-300 ease-out peer-checked/nav:translate-x-0 pt-safe pb-safe">
+<!-- Drawer Header -->
+<div class="h-16 px-gutter-mobile flex items-center justify-between bg-surface-container-low shrink-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-tight">Diario Cronologico</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">40 Settimane + 12 Mesi</span>
+</div>
+</div>
+<label class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors cursor-pointer" for="local-nav-drawer">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</label>
+</div>
+<!-- Drawer Navigation Content -->
+<div class="flex-1 overflow-y-auto px-margin-mobile py-space-md space-y-space-lg">
+<!-- Sezione Gravidanza -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-secondary">pregnant_woman</span>
+            Gravidanza (1-40)
+          </span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full font-semibold">In Corso</span>
+</div>
+<!-- 1° Trimestre -->
+<div class="bg-surface-container-low p-3 rounded-xl space-y-2">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md font-semibold">1° Trimestre (Sett. 1 - 13)</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Concluso
+            </span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S1–S8</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S9–S11</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S12 Bi-Test</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S13</span>
+</div>
+</div>
+<!-- 2° Trimestre (ATTIVO) -->
+<div class="bg-primary-fixed/20 p-3 rounded-xl space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">2° Trimestre (Sett. 14 - 27)</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">Mese 5</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5">
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S18</span>
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S19</span>
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S20</span>
+<!-- Settimana Attiva -->
+<div class="h-9 relative flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" id="drawer-active-week">
+<span>S21</span>
+<span class="absolute -top-1.5 -right-1 px-1 bg-secondary text-on-secondary rounded text-[9px] font-bold tracking-tight shadow">OGGI</span>
+</div>
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S22</span>
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S23</span>
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S24</span>
+<span class="h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md">S25-27</span>
+</div>
+</div>
+<!-- 3° Trimestre -->
+<div class="bg-surface-container-low p-3 rounded-xl space-y-2 opacity-80">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md font-semibold">3° Trimestre (Sett. 28 - 40)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prossimamente</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S28 Accrescimento</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S32 Valigia</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">S36-40 Parto</span>
+</div>
+</div>
+</div>
+<!-- Sezione Neonato -->
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">child_care</span>
+            Primi 12 Mesi di Vita
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Fase 2</span>
+</div>
+<div class="space-y-1.5">
+<div class="p-2.5 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">cottage</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Mese 1: Rientro a Casa</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero sprechi</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">bedtime</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mesi 2 - 3: Ritmi e Culla</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">In attesa</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">restaurant</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mesi 4 - 6: Svezzamento</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Seggiolone</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">explore</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mesi 7 - 9: Esplorazione</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">In attesa</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">celebration</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mesi 10 - 12: Primi Passi</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1° Anno</span>
+</div>
+</div>
+</div>
+<!-- Link Rapido Ricalcolo Data -->
+<div class="pt-2">
+<a class="w-full flex items-center justify-center gap-2 p-3 rounded-xl bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+<span class="font-label-md text-label-md">Ricalcola periodo o data presunta</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main View Container -->
+<div class="px-margin-mobile py-space-md space-y-space-md">
+<!-- Timeline Quick Switcher Bar -->
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded-xl">
+<label class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary cursor-pointer active:scale-95 transition-all" for="local-nav-drawer">
+<span class="material-symbols-outlined text-[18px]">toc</span>
+<span class="font-label-sm text-label-sm font-semibold">Cronologia</span>
+</label>
+<!-- Horizontal Quick Step Navigation -->
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 text-on-surface-variant hover:text-on-surface flex items-center gap-0.5 rounded text-sm active:bg-surface-container">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="font-label-sm text-label-sm hidden sm:inline" id="prev-week-label">Sett. 20</span>
+</button>
+<span class="px-3 py-1 bg-primary text-on-primary rounded-full font-label-sm text-label-sm font-semibold shadow-sm" id="current-week-pill">
+          21ª Settimana
+        </span>
+<button class="px-2 py-1 text-on-surface-variant hover:text-on-surface flex items-center gap-0.5 rounded text-sm active:bg-surface-container">
+<span class="font-label-sm text-label-sm hidden sm:inline" id="next-week-label">Sett. 22</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Period Badge & Editorial Hero Heading -->
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]">spa</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider" id="period-badge-text">Consiglio del Periodo • 21ª Settimana</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-snug">
+        La morfologica e le scelte sul passeggino: cosa serve davvero adesso
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        A metà del cammino le pressioni commerciali aumentano. Separiamo la serenità degli accertamenti clinici gratuiti dagli acquisti inutilmente precoci.
+      </p>
+</div>
+<!-- Visual Anchor: Contextual Maternal Photography -->
+<div class="relative w-full h-44 rounded-2xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Warm natural light portrait of an expectant Italian mother sitting comfortably in an organic linen armchair at home holding an ultrasound picture, warm earth tones, terracotta mug on wooden side table, editorial calm atmosphere, newsreader aesthetic, soft natural daylight, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATx6UHwznkB_MQXFBdVQQSMaXGPWIrUnxdA1WaD47LigB7csZKxmxYvgXvdUbNxTza0YIVWCeeFGrGdWatAjhhyhZ8-BQw0ftRF7dwUi121UTL8X6s4g3neujLPHnJjHok2_WGUhXMzYOQE8pmjiOeNSTpdQwovuMYC7hNOIBTaMC3nMHiVpjo9mqXNa-_iBr6x_ngUTLNkA8d8gO8iZD7jKyBl3DIE-sHY3FaY3IJNHp68RfQS-k1ew"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent flex items-end p-3">
+<div class="flex items-center gap-1.5 text-on-primary text-xs">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm font-medium">Bambino lungo circa 26 cm • Inizio dei primi movimenti percettibili</span>
+</div>
+</div>
+</div>
+<!-- Box 1: Il Consiglio Sanitario e Visite (SSN) -->
+<div class="bg-primary-fixed/25 p-4 rounded-2xl space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">ecg_heart</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider block">Visita Clinica Chiave</span>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Ecografia Morfologica (19ª - 21ª Sett.)</h2>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold">SSN</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+        È l'esame che analizza l'anatomia fetale e la posizione della placenta. Fa parte dei protocolli essenziali garantiti dal Servizio Sanitario Nazionale.
+      </p>
+<div class="bg-surface-container-lowest p-3 rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px]">receipt_long</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Codice Esenzione Ricetta: <span class="text-primary font-mono font-bold">M21</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nessun ticket dovuto se prescritto tra 19+0 e 20+6.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+</div>
+</div>
+<!-- Box 2: Spesa da Rimandare Assolutamente (Anti-Spreco) -->
+<div class="bg-secondary-fixed/35 p-4 rounded-2xl space-y-3">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">savings</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Regola Anti-Spreco #21</span>
+<h2 class="font-headline-sm text-headline-sm text-secondary leading-tight">Seggiolone Pappa: NON Comprarlo Adesso!</h2>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+        I cataloghi premaman spingono per l'acquisto immediato dei seggioloni multifunzione con riduttori nascita. La realtà fisiologica ed economica è un'altra:
+      </p>
+<div class="space-y-2">
+<div class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">cancel</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+<strong>Nessun uso prima dei 6 mesi:</strong> Il bimbo non ha il tono posturale per stare seduto fino allo svezzamento. Tenerlo in salotto per 8 mesi ruba spazio vitale.
+          </div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-2.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+<strong>Risparmio immediato:</strong> Trattieni in tasca <strong>150€ – 250€</strong> per le spese realmente indispensabili di fine trimestre.
+          </div>
+</div>
+</div>
+</div>
+<!-- Box 3: Cosa ha senso valutare con calma -->
+<div class="bg-surface-container p-4 rounded-2xl space-y-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cosa ha senso valutare con calma</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Il telaio del passeggino leggero o modulare: anziché ordinare d'impulso sistemi "trio" giganti da 900€, fai questa prova pratica e gratuita:
+      </p>
+<div class="p-3 bg-surface-container-low rounded-xl space-y-2">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+<span>Il Test del Bagagliaio Reale</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Visita un negozio fisico o prova il passeggino di un amico direttamente nel portabagagli della tua auto. L'80% delle famiglie cambia il trio dopo soli 5 mesi perché "troppo pesante per il baule".
+        </p>
+</div>
+</div>
+<!-- Box 4: Checklist Interattiva della Settimana 21 -->
+<div class="bg-surface-container-low p-4 rounded-2xl space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">I 3 Compiti Essenziali di Questa Settimana</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-bold" id="task-counter">1 / 3 Fatti</span>
+</div>
+<!-- Checklist Items -->
+<div class="space-y-2" id="week-checklist">
+<!-- Item 1 -->
+<label class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-3 cursor-pointer select-none shadow-sm transition-all hover:bg-surface-container-low">
+<input checked="" class="mt-1 w-5 h-5 accent-[#134231] rounded cursor-pointer task-checkbox" type="checkbox"/>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Prenotazione Ecografia Morfologica (M21)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verificare la data nei calendari CUP regionali.</span>
+</div>
+</label>
+<!-- Item 2 -->
+<label class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-3 cursor-pointer select-none shadow-sm transition-all hover:bg-surface-container-low">
+<input class="mt-1 w-5 h-5 accent-[#134231] rounded cursor-pointer task-checkbox" type="checkbox"/>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Misurare il bagagliaio e le porte dell'ascensore</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Evita acquisti ingombranti che non entrano a casa.</span>
+</div>
+</label>
+<!-- Item 3 -->
+<label class="p-3 bg-surface-container-lowest rounded-xl flex items-start gap-3 cursor-pointer select-none shadow-sm transition-all hover:bg-surface-container-low">
+<input class="mt-1 w-5 h-5 accent-[#134231] rounded cursor-pointer task-checkbox" type="checkbox"/>
+<div class="flex-1">
+<span class="font-body-md text-body-md text-on-surface block font-medium">Idratazione della pelle e riposo su fianco sinistro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Semplice olio di mandorle dolci puro (costo &lt;7€ in farmacia).</span>
+</div>
+</label>
+</div>
+<!-- Download Button Action -->
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm active:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Scarica Scheda Promemoria Settimana 21 (PDF)</span>
+</button>
+</div>
+<!-- Box 5: Fonte Ufficiale Ministero / ISS -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md font-bold">Validazione Scientifica e Riferimenti Istituzionali</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Le indicazioni sulle indagini ecografiche e la tempistica del codice M21 fanno riferimento alle <em>Linee Guida Nazionali per la Gravidanza Fisiologica</em> redatte da <strong>Istituto Superiore di Sanità (ISS)</strong>, CeVEAS e Ministero della Salute.
+      </p>
+<div class="pt-1 flex items-center justify-between text-xs text-outline">
+<span>Aggiornamento Protocollo: SNLG 2023/2024</span>
+<span class="text-primary font-medium underline cursor-pointer">Consulta Fonte Ufficiale</span>
+</div>
+</div>
+<!-- Editorial Independent Disclosure -->
+<div class="p-3 rounded-lg bg-surface-container text-center">
+<p class="font-label-sm text-label-sm text-outline">
+        Nota Indipendente: Questa guida non accetta sponsorizzazioni da produttori di prima infanzia. I consigli mirano esclusivamente a tutelare il benessere del nascituro e la serenità economica della famiglia.
+      </p>
+</div>
+</div>
+<!-- Interactive Checkbox Logic -->
+<script>
+    (function() {
+      const checkboxes = document.querySelectorAll('.task-checkbox');
+      const counterEl = document.getElementById('task-counter');
+      
+      function updateProgress() {
+        if (!checkboxes || !counterEl) return;
+        let checkedCount = 0;
+        checkboxes.forEach(cb => {
+          if (cb.checked) checkedCount++;
+        });
+        counterEl.textContent = checkedCount + ' / ' + checkboxes.length + ' Fatti';
+        if (checkedCount === checkboxes.length) {
+          counterEl.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary text-on-primary font-bold';
+        } else {
+          counterEl.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-bold';
+        }
+      }
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', updateProgress);
+      });
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-40 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 transition-colors text-primary font-semibold" data-path="advice-hub" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">Consigli</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="essential-kit" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm">Kit Base</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="calculator-wizard" href="#"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-sm text-label-sm">Calcolatore</span></a><a class="flex flex-col items-center justify-center w-16 h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="medical-sources" href="#"><span class="material-symbols-outlined text-[22px]">health_and_safety</span><span class="font-label-sm text-label-sm">Fonti ISS</span></a></div></nav>
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  let w = parseInt(params.get('settimana') || params.get('week'), 10);
+  if (!w || isNaN(w)) w = 21;
+  if (w < 1) w = 1;
+  if (w > 42) w = 42;
+  const weekStr = w + 'ª';
+
+  const hb = document.getElementById('header-week-badge');
+  if (hb) hb.textContent = 'Sett. ' + w;
+
+  const pb = document.getElementById('period-badge-text');
+  if (pb) pb.textContent = 'Consiglio del Periodo • ' + weekStr;
+
+  const pill = document.getElementById('current-week-pill');
+  if (pill) pill.textContent = weekStr + ' Settimana';
+
+  const prevL = document.getElementById('prev-week-label');
+  if (prevL) prevL.textContent = 'Sett. ' + Math.max(1, w - 1);
+
+  const nextL = document.getElementById('next-week-label');
+  if (nextL) nextL.textContent = 'Sett. ' + Math.min(42, w + 1);
+
+  // Drawer: sposta lo stato "settimana attiva" sulla settimana scelta
+  const active = document.getElementById('drawer-active-week');
+  if (active) {
+    const grid = active.parentElement;
+    const siblings = Array.prototype.slice.call(grid.children);
+    siblings.forEach(function(el) {
+      const isCurrent = el === active;
+      const txt = (el.textContent || '').trim();
+      const matches = new RegExp('^S' + w + '$').test(txt.split('OGGI')[0].trim());
+      const badge = el.querySelector('.oggi-label');
+      if (isCurrent) {
+        el.className = 'h-9 relative flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm';
+        const span = el.querySelector('span');
+        if (span) span.textContent = 'S' + w;
+        if (!badge) {
+          const b = document.createElement('span');
+          b.className = 'oggi-label absolute -top-1.5 -right-1 px-1 bg-secondary text-on-secondary rounded text-[9px] font-bold tracking-tight shadow';
+          b.textContent = 'OGGI';
+          el.appendChild(b);
+        }
+      } else {
+        el.className = 'h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md';
+        const span = el.querySelector('span');
+        if (span && span.textContent.indexOf('S') === 0) span.textContent = txt.replace('OGGI', '').trim();
+        if (badge) badge.remove();
+      }
+      if (matches && el !== active) {
+        el.className = 'h-9 relative flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm';
+        const span = el.querySelector('span');
+        if (span) span.textContent = 'S' + w;
+        if (!el.querySelector('.oggi-label')) {
+          const b = document.createElement('span');
+          b.className = 'oggi-label absolute -top-1.5 -right-1 px-1 bg-secondary text-on-secondary rounded text-[9px] font-bold tracking-tight shadow';
+          b.textContent = 'OGGI';
+          el.appendChild(b);
+        }
+      }
+    });
+  }
+})();
+</script>
+</body></html>
