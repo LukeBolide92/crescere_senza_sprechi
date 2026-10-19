@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - {{ SITESUBTITLE }}{% endblock %}
+
+{% block meta_description %}{{ SITEDESCRIPTION }} Scopri guide pratiche, checklist e confronti per risparmiare consapevolmente durante la gravidanza e il primo anno del bambino.{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-gradient-to-br from-brand-50 to-white py-16 md:py-24 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+        <h1 class="font-serif text-4xl md:text-6xl font-bold text-brand-900 leading-tight mb-6">Crescere insieme, spendere meglio.</h1>
+        <p class="text-lg md:text-xl text-neutral-700 mb-10 leading-relaxed">Ti aiutiamo a capire cosa serve davvero, cosa preparare e come fare scelte consapevoli, evitando spese inutili e perdite di tempo.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ SITEURL }}/percorso/" class="btn btn-large">Inizia il tuo percorso</a>
+            <a href="{{ SITEURL }}/guide/" class="btn btn-secondary btn-large">Esplora le guide</a>
+        </div>
+    </div>
+</div>
+
+<section class="bg-gradient-to-br from-brand-50 to-white py-16 md:py-24 text-center mb-16" aria-label="Hero">
+    <div class="max-w-3xl mx-auto px-6">
+        <h1 class="font-serif text-4xl md:text-6xl font-bold text-brand-900 leading-tight mb-6">Crescere insieme, spendere meglio.</h1>
+        <p class="text-lg md:text-xl text-neutral-700 mb-10 leading-relaxed">Ti aiutiamo a capire cosa serve davvero, cosa preparare e come fare scelte consapevoli, evitando spese inutili e perdite di tempo.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="container">
+        <h2>Il tuo percorso, mese per mese</h2>
+        <div class="phase-grid">
+            <a href="{{ SITEURL }}/gravidanza/test-positivo/" class="phase-card"><h3>Test positivo</h3><p>Le prime decisioni e le informazioni essenziali.</p></a>
+            <a href="{{ SITEURL }}/gravidanza/primo-trimestre/" class="phase-card"><h3>1° trimestre</h3><p>Organizzazione e prime visite.</p></a>
+            <a href="{{ SITEURL }}/gravidanza/secondo-trimestre/" class="phase-card"><h3>2° trimestre</h3><p>Preparazione della casa e della lista nascita.</p></a>
+            <a href="{{ SITEURL }}/gravidanza/terzo-trimestre/" class="phase-card"><h3>3° trimestre</h3><p>Ultime settimane, borsa per l'ospedale.</p></a>
+            <a href="{{ SITEURL }}/mesi/primo-mese/" class="phase-card"><h3>0-1 mese</h3><p>Rientro a casa e organizzazione.</p></a>
+            <a href="{{ SITEURL }}/mesi/mesi-4-6/" class="phase-card"><h3>4-6 mesi</h3><p>Seggiolone, sicurezza e giochi.</p></a>
+            <a href="{{ SITEURL }}/mesi/mesi-10-12/" class="phase-card"><h3>10-12 mesi</h3><p>Organizzazione e preparazione al compleanno.</p></a>
+        </div>
+    </div>
+</section>
+
+<section class="section-guide" aria-label="Guide principali">
+    <div class="container">
+        <h2>Cosa ti serve davvero</h2>
+        <div class="guide-list">
+            <article class="guide-card">
+                <h3><a href="{{ SITEURL }}/guide/guida-lista-nascita/">Guida alla lista nascita</a></h3>
+                <p>Cosa comprare prima della nascita e cosa può aspettare.</p>
+            </article>
+            <article class="guide-card">
+                <h3><a href="{{ SITEURL }}/guide/guida-passeggino/">Come scegliere un passeggino</a></h3>
+                <p>Criteri reali, fasce di prezzo e errori comuni.</p>
+            </article>
+            <article class="guide-card">
+                <h3><a href="{{ SITEURL }}/guide/guida-prodotti-usati/">Prodotti usati e noleggio</a></h3>
+                <p>Quando conviene, cosa controllare e come risparmiare.</p>
+            </article>
+            <article class="guide-card">
+                <h3><a href="{{ SITEURL }}/guide/guida-corsi-preparto/">Scegliere un corso preparto</a></h3>
+                <p>Domande da fare, modalità e come confrontare le offerte.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section-checklist" aria-label="Checklist utili">
+    <div class="container">
+        <h2>Checklist gratuite</h2>
+        <ul class="checklist-items">
+            <li><a href="{{ SITEURL }}/checklist/rientro-casa/">Rientro a casa con il neonato</a></li>
+            <li><a href="{{ SITEURL }}/checklist/acquisti/">Checklist acquisti essenziali</a></li>
+            <li><a href="{{ SITEURL }}/checklist/corso-preparto/">Domande da fare durante un corso preparto</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="section-commercial" aria-label="Collaborazioni commerciali">
+    <div class="container">
+        <h2>Collaborazioni ed affiliazioni</h2>
+        <p>Questo portale propone contenuti editoriali indipendenti. Quando presenti, i link affiliazione sono dichiarati chiaramente e non influenzano le raccomandazioni. Non presentiamo prezzi minimi inventati o classifiche non trasparenti.</p>
+        <a href="{{ SITEURL }}/collaborazioni/" class="btn">Scopri come collaborare</a>
+    </div>
+</section>
+
+<section class="section-about" aria-label="Chi siamo">
+    <div class="container">
+        <h2>Metodo editoriale</h2>
+        <p>Le guide sono basate su fonti istituzionali (Ministero della Salute, ISS, fonti pediatriche riconosciute) e su dati verificati. Non offriamo diagnosi personalizzate o indicazioni mediche. Per informazioni aggiornate su agevolazioni e scadenze, consultiamo fonti istituzionali con data di verifica.</p>
+        <a href="{{ SITEURL }}/metodo-editoriale/">Leggi il metodo editoriale →</a>
+    </div>
+</section>
+{% endblock %}

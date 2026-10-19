@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+{% set page = page if page is defined else none %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Pelican 4.12">
+    <title>{% block title %}{% if article %}{{ article.title }} - {% elif page is defined and page %}{{ page.title }} - {% endif %}{{ SITENAME }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% if article %}{{ article.summary|striptags|truncate(160) }}{% elif page is defined and page %}{{ page.summary|striptags|truncate(160) }}{% else %}{{ SITEDESCRIPTION }}{% endif %}{% endblock %}">
+    <link rel="canonical" href="{% block canonical %}{{ SITEURL }}/{{ article.url if article else (page.url if page is defined and page else '') }}{% endblock %}">
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:title" content="{% block og_title %}{% if article %}{{ article.title }}{% elif page is defined and page %}{{ page.title }}{% else %}{{ SITENAME }}{% endif %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% if article %}{{ article.summary|striptags|truncate(160) }}{% elif page is defined and page %}{{ page.summary|striptags|truncate(160) }}{% else %}{{ SITEDESCRIPTION }}{% endif %}{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}{% if article or (page is defined and page) %}article{% else %}website{% endif %}{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{{ SITEURL }}/{{ article.url if article else (page.url if page is defined and page else '') }}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{{ SITEURL }}/theme/static/images/og-default.jpg{% endblock %}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cresceresprechi">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ SITEURL }}/theme/static/images/favicon.svg">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/theme/static/images/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#ecfdf5', 100: '#d1fae5', 600: '#059669', 700: '#047857', 900: '#064e3b' },
+                        clay: '#c28a6e',
+                    },
+                    fontFamily: { serif: ['"Lora"', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/static/css/style.css">
+    
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} RSS" href="{{ SITEURL }}/rss.xml">
+    
+    <!-- JSON-LD structured data -->
+    {% block json_ld %}{% endblock %}
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+    
+    <header class="site-header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <a href="{{ SITEURL }}/" class="site-logo" aria-label="{{ SITENAME }} - Home">
+                    <svg class="logo-icon" viewBox="0 0 32 32" aria-hidden="true" width="32" height="32">
+                        <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 6v10M11 16h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text">{{ SITENAME }}</span>
+                    <span class="logo-tagline">{{ SITESUBTITLE }}</span>
+                </a>
+                
+                <nav class="main-nav" role="navigation" aria-label="Menu principale">
+                    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Apri menu">
+                        <span class="hamburger" aria-hidden="true"></span>
+                    </button>
+                    <ul id="nav-menu" class="nav-list">
+                        <li><a href="{{ SITEURL }}/">Home</a></li>
+                        <li class="nav-has-dropdown">
+                            <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-gravidanza">Gravidanza <span class="dropdown-arrow" aria-hidden="true">▼</span></button>
+                            <ul id="nav-gravidanza" class="nav-dropdown" role="menu">
+                                <li role="none"><a href="{{ SITEURL }}/gravidanza/test-positivo/" role="menuitem">Test positivo</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/gravidanza/primo-trimestre/" role="menuitem">Primo trimestre</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/gravidanza/secondo-trimestre/" role="menuitem">Secondo trimestre</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/gravidanza/terzo-trimestre/" role="menuitem">Terzo trimestre</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/gravidanza/ultime-settimane/" role="menuitem">Ultime settimane</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/gravidanza/rientro-casa/" role="menuitem">Rientro a casa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-has-dropdown">
+                            <button class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-mesi">Mesi del bambino <span class="dropdown-arrow" aria-hidden="true">▼</span></button>
+                            <ul id="nav-mesi" class="nav-dropdown" role="menu">
+                                <li role="none"><a href="{{ SITEURL }}/mesi/primo-mese/" role="menuitem">0-1 mese</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/mesi/mesi-2-3/" role="menuitem">2-3 mesi</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/mesi/mesi-4-6/" role="menuitem">4-6 mesi</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/mesi/mesi-7-9/" role="menuitem">7-9 mesi</a></li>
+                                <li role="none"><a href="{{ SITEURL }}/mesi/mesi-10-12/" role="menuitem">10-12 mesi</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ SITEURL }}/guide/">Guide</a></li>
+                        <li><a href="{{ SITEURL }}/prodotti/">Prodotti</a></li>
+                        <li><a href="{{ SITEURL }}/corsi/">Corsi preparto</a></li>
+                        <li><a href="{{ SITEURL }}/checklist/">Checklist</a></li>
+                        <li><a href="{{ SITEURL }}/risparmio/" class="nav-cta">Risparmio</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="{{ SITEURL }}/percorso/" class="btn btn-primary">Il tuo percorso</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        {% block breadcrumb %}
+        {% if article or (page is defined and page) %}
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="{{ SITEURL }}/">Home</a></li>
+                    {% if article %}
+                        <li><a href="{{ SITEURL }}/guide/">Guide</a></li>
+                        <li aria-current="page">{{ article.title }}</li>
+                    {% elif page is defined and page %}
+                        <li aria-current="page">{{ page.title }}</li>
+                    {% endif %}
+                </ol>
+            </div>
+        </nav>
+        {% endif %}
+        {% endblock %}
+        
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="{{ SITEURL }}/" class="footer-logo">{{ SITENAME }}</a>
+                    <p>{{ SITESUBTITLE }}</p>
+                    <p class="footer-tagline">Portale editoriale indipendente per genitori consapevoli.</p>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Link utili">
+                    <h4>Percorso</h4>
+                    <ul>
+                        <li><a href="{{ SITEURL }}/gravidanza/">Gravidanza</a></li>
+                        <li><a href="{{ SITEURL }}/mesi/">Mesi del bambino</a></li>
+                        <li><a href="{{ SITEURL }}/percorso/">Il tuo percorso</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Guide e risorse">
+                    <h4>Guide e risorse</h4>
+                    <ul>
+                        <li><a href="{{ SITEURL }}/guide/">Tutte le guide</a></li>
+                        <li><a href="{{ SITEURL }}/prodotti/">Confronta prodotti</a></li>
+                        <li><a href="{{ SITEURL }}/corsi/">Corsi preparto</a></li>
+                        <li><a href="{{ SITEURL }}/checklist/">Checklist gratuite</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Informazioni">
+                    <h4>Informazioni</h4>
+                    <ul>
+                        <li><a href="{{ SITEURL }}/chi-siamo/">Chi siamo</a></li>
+                        <li><a href="{{ SITEURL }}/metodo-editoriale/">Metodo editoriale</a></li>
+                        <li><a href="{{ SITEURL }}/collaborazioni/">Collabora con noi</a></li>
+                        <li><a href="{{ SITEURL }}/contatti/">Contatti</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Legale">
+                    <h4>Legale</h4>
+                    <ul>
+                        <li><a href="{{ SITEURL }}/privacy/">Privacy</a></li>
+                        <li><a href="{{ SITEURL }}/cookie/">Cookie</a></li>
+                        <li><a href="{{ SITEURL }}/note-legali/">Note legali</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; {{ SITENAME }} 2024. Tutti i diritti riservati.</p>
+                <p class="footer-disclaimer">I contenuti hanno scopo informativo e non sostituiscono il parere medico professionale.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="{{ SITEURL }}/theme/static/js/main.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

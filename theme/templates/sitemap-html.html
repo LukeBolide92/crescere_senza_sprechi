@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Sitemap - {{ SITENAME }}{% endblock %}
+
+{% block meta_description %}Mappa del sito Crescere Senza Sprechi.{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Mappa del sito</h1>
+    <ul>
+        <li><a href="{{ SITEURL }}/">Home</a></li>
+        <li><a href="{{ SITEURL }}/gravidanza/">Gravidanza</a></li>
+        <li><a href="{{ SITEURL }}/mesi/">Mesi del bambino</a></li>
+        <li><a href="{{ SITEURL }}/guide/">Guide</a></li>
+        <li><a href="{{ SITEURL }}/prodotti/">Prodotti</a></li>
+        <li><a href="{{ SITEURL }}/corsi/">Corsi preparto</a></li>
+        <li><a href="{{ SITEURL }}/checklist/">Checklist</a></li>
+        <li><a href="{{ SITEURL }}/percorso/">Il tuo percorso</a></li>
+        <li><a href="{{ SITEURL }}/collaborazioni/">Collaborazioni</a></li>
+        <li><a href="{{ SITEURL }}/chi-siamo/">Chi siamo</a></li>
+    </ul>
+</div>
+{% endblock %}

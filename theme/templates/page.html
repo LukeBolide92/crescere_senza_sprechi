@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{% if page is defined and page.title %}{{ page.title }} - {% endif %}{{ SITENAME }}{% endblock %}
+
+{% block meta_description %}{% if page is defined and page.summary %}{{ page.summary }}{% else %}{{ SITEDESCRIPTION }}{% endif %}{% endblock %}
+
+{% block content %}
+<article class="page">
+    <header class="page-header">
+        <div class="container">
+            <h1>{% if page is defined and page.title %}{{ page.title }}{% else %}Pagina{% endif %}</h1>
+            {% if page is defined and page.modified %}
+            <time class="page-last-modified" datetime="{{ page.modified.isoformat() }}">
+                Ultima modifica: {{ page.modified.strftime('%d %B %Y') }}
+            </time>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="page-content">
+            {% if page is defined and page.content %}{{ page.content }}{% endif %}
+        </div>
+        
+        {% if page.sources %}
+        <section class="page-sources">
+            <h2>Fonti</h2>
+            <ul>
+                {% for source in page.sources %}
+                <li><a href="{{ source }}" rel="noopener noreferrer">{{ source }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    </div>
+</article>
+{% endblock %}

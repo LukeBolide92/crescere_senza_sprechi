@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}{% if article %}{{ article.title }} - {% elif page is defined and page %}{{ page.title }} - {% endif %}{{ SITENAME }}{% endblock %}
+
+{% block meta_description %}{% if article %}{{ article.summary|striptags|truncate(160) }}{% elif page %}{{ page.summary|striptags|truncate(160) }}{% else %}{{ SITEDESCRIPTION }}{% endif %}{% endblock %}
+
+{% block og_image %}{% if article and article.cover %}{{ SITEURL }}/{{ article.cover }}{% elif page and page.cover %}{{ SITEURL }}/{{ page.cover }}{% else %}{{ SITEURL }}/theme/static/images/og-default.jpg{% endif %}{% endblock %}
+
+{% block json_ld %}
+{% if article %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ article.title|e }}",
+  "description": "{{ article.summary|striptags|e }}",
+  "image": "{{ SITEURL }}/{{ article.cover or 'theme/static/images/og-default.jpg' }}",
+  "datePublished": "{{ article.date.isoformat() if article.date else '' }}",
+  "dateModified": "{{ article.modified.isoformat() if article.modified else article.date.isoformat() if article.date else '' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ article.author.name if article.author else 'Redazione Crescere Senza Sprechi' }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ SITENAME }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ SITEURL }}/theme/static/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": "{{ SITEURL }}/{{ article.url }}"
+}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if article %}
+<article class="article-page">
+    <header class="article-header">
+        <div class="container">
+            {% if article.category %}
+            <span class="article-category"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+            {% endif %}
+            <h1>{{ article.title }}</h1>
+            
+            <div class="article-meta">
+                <time datetime="{{ article.date.isoformat() if article.date else '' }}" class="article-date">
+                    {{ article.date.strftime('%d %B %Y') if article.date else '' }}
+                </time>
+                {% if article.modified and article.modified != article.date %}
+                <time datetime="{{ article.modified.isoformat() }}" class="article-modified">
+                    Aggiornato il {{ article.modified.strftime('%d %B %Y') }}
+                </time>
+                {% endif %}
+                <span class="article-author">{{ article.author.name if article.author else 'Redazione Crescere Senza Sprechi' }}</span>
+                {% if article.reading_time %}
+                <span class="article-reading-time">{{ article.reading_time }} min di lettura</span>
+                {% endif %}
+            </div>
+            
+            {% if article.tags %}
+            <ul class="article-tags">
+                {% for tag in article.tags %}
+                <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </header>
+    
+    {% if article.cover %}
+    <figure class="article-cover">
+        <img src="{{ SITEURL }}/{{ article.cover }}" alt="" loading="lazy">
+        {% if article.cover_caption %}<figcaption>{{ article.cover_caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    
+    <div class="container">
+        <div class="article-body">
+            {% if article.toc %}
+            <nav class="article-toc" aria-label="Indice">
+                <h2>Indice</h2>
+                {{ article.toc }}
+            </nav>
+            {% endif %}
+            
+            <div class="article-content">
+                {{ article.content }}
+            </div>
+        </div>
+        
+        {% if article.info_boxes %}
+        <aside class="article-sidebars">
+            {% for box in article.info_boxes %}
+            <div class="info-box {{ box.type }}">
+                <h3>{{ box.title }}</h3>
+                {{ box.content }}
+            </div>
+            {% endfor %}
+        </aside>
+        {% endif %}
+        
+        {% if article.sources %}
+        <section class="article-sources">
+            <h2>Fonti</h2>
+            <ul>
+                {% for source in article.sources %}
+                <li>{{ source }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+        
+        {% if article.disclosure %}
+        <div class="article-disclosure">
+            <p><strong>Nota:</strong> {{ article.disclosure }}</p>
+        </div>
+        {% endif %}
+        
+        {% if article.cta %}
+        <div class="article-cta">
+            {{ article.cta }}
+        </div>
+        {% endif %}
+        
+        <nav class="article-related" aria-label="Articoli correlati">
+            <h2>Guide correlate</h2>
+            <ul>
+                {% for related in article.related_articles[:3] %}
+                <li><a href="{{ SITEURL }}/{{ related.url }}">{{ related.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</article>
+{% endif %}
+{% endblock %}
