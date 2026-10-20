@@ -1,145 +1,60 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# Configuration file for Pelican static site generator
-# Crescere Senza Sprechi
+#!/usr/bin/env python3
+# Configurazione Pelican - Crescere Senza Sprechi
 
-import os
-import yaml
+AUTHOR = 'Crescere Senza Sprechi'
+SITENAME = 'Crescere Senza Sprechi'
+SITEURL = 'https://crescere-senza-sprechi.it'
+PATH = 'content'
+TIMEZONE = 'Europe/Rome'
+DEFAULT_LANG = 'it'
 
-# ---------------------------------------------------------------------------
-# Percorsi
-# ---------------------------------------------------------------------------
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-CONTENT_DIR = os.path.join(PROJECT_ROOT, "content")
-DATA_DIR = os.path.join(CONTENT_DIR, "data")
-OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
+THEME = 'theme'
 
-PATH = CONTENT_DIR
-OUTPUT_PATH = OUTPUT_DIR
-THEME = "theme"
+# URL slug
+ARTICLE_URL = 'guide/{slug}.html'
+ARTICLE_SAVE_AS = 'guide/{slug}.html'
+ARTICLE_LANG_URL = 'guide/{slug}-{lang}.html'
+ARTICLE_LANG_SAVE_AS = 'guide/{slug}-{lang}.html'
+CATEGORY_URL = 'area/{slug}.html'
+CATEGORY_SAVE_AS = 'area/{slug}.html'
+TAG_URL = 'tag/{slug}.html'
+TAG_SAVE_AS = 'tag/{slug}.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+ARCHIVES_URL = 'guide/'
+ARCHIVES_SAVE_AS = 'guide/index.html'
 
-# Cartelle statiche tema
-STATIC_PATHS = ["theme/static"]
-
-# ---------------------------------------------------------------------------
-# Impostazioni di base
-# ---------------------------------------------------------------------------
-SITENAME = "Crescere Senza Sprechi"
-SITESUBTITLE = "Crescere insieme, spendere meglio."
-SITEDESCRIPTION = (
-    "Ti aiutiamo a capire cosa serve davvero, cosa preparare e come fare "
-    "scelte consapevoli, evitando spese inutili e perdite di tempo."
-)
-SITEURL = "http://localhost:8000"
-CANONICAL_URL = "http://localhost:8000"
-BASE_URL = "http://localhost:8000"
-
-TIMEZONE = "Europe/Rome"
-DEFAULT_LANG = "it"
-DEFAULT_DATE = "fs"
-DEFAULT_DATE_FORMAT = "%A %d %B %Y"
-LOAD_CONTENT_CACHE = False
-CACHE_CONTENT = False
-
-# ---------------------------------------------------------------------------
-# URL e permalink
-# ---------------------------------------------------------------------------
-ARTICLE_URL = "guide/{slug}/"
-ARTICLE_SAVE_AS = "guide/{slug}.html"
-ARTICLE_LANG_URL = "guide/{slug}/"
-ARTICLE_LANG_SAVE_AS = "guide/{slug}.html"
-
-PAGE_URL = "{slug}/"
-PAGE_SAVE_AS = "{slug}.html"
-PAGE_LANG_URL = "{slug}/"
-PAGE_LANG_SAVE_AS = "{slug}.html"
-
-CATEGORY_URL = "categoria/{slug}/"
-CATEGORY_SAVE_AS = "categoria/{slug}.html"
-
-TAG_URL = "tema/{slug}/"
-TAG_SAVE_AS = "tema/{slug}.html"
-
-AUTHOR_URL = "autore/{slug}/"
-AUTHOR_SAVE_AS = "autore/{slug}.html"
-
-INDEX_SAVE_AS = "index.html"
-INDEX_URL = ""
-PAGINATION_URL = "pagina/{num}/"
-PAGINATION_SAVE_AS = "pagina/{num}.html"
-
-# Pagine da generare con i template diretti
-DIRECT_TEMPLATES = ["index", "page", "404"]
-TEMPLATE_PAGES = {
-    # Mappatura template-name.html -> output-name.html in radice
-    "404.html": "404.html",
-    "index.html": "index.html",
-}
-
-# ---------------------------------------------------------------------------
-# Markdown
-# ---------------------------------------------------------------------------
+# Plugin markdown
 MARKDOWN = {
-    "extension_configs": {
-        "markdown.extensions.extra": {},
-        "markdown.extensions.codehilite": {},
-        "markdown.extensions.toc": {"permalink": True, "slugify": lambda x: x.lower().replace(" ", "-")},
-        "markdown.extensions.smarty": {},
+    'extension_configs': {
+        'markdown.extensions.meta': {},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.toc': {},
     },
-    "output_format": "html5",
+    'output_format': 'html5',
 }
 
-# ---------------------------------------------------------------------------
-# Feed RSS
-# ---------------------------------------------------------------------------
-FEED_RSS = "rss.xml"
-FEED_ALL_RSS = None
-FEED_DOMAIN = "localhost"
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+# Indice articoli con paginazione
+PAGINATED_TEMPLATES = {
+    'index': None,
+    'tag': None,
+    'category': None,
+    'author': None,
+}
+PAGINATION_PATTERNS = [
+    (1, '{name}{extension}', '{name}{extension}'),
+    (2, '{name}{number}{extension}', '{name}{number}{extension}'),
+]
+DEFAULT_PAGINATION = 12
 
-# ---------------------------------------------------------------------------
-# Plugin / segnali per caricare i dati strutturati
-# ---------------------------------------------------------------------------
-PRODUCTS = []
-COURSES = []
-PROFESSIONALS = []
-CATEGORIES = []
-PHASES = []
-AFFILIATES = {}
-
-
-def _load_yaml(name):
-    path = os.path.join(DATA_DIR, name)
-    if os.path.exists(path):
-        with open(path, "r", encoding="utf-8") as f:
-            data = yaml.safe_load(f)
-            return data if data is not None else []
-    return []
-
-
-def _load_custom_data():
-    """Carica i file YAML dei dati strutturati in variabili globali."""
-    global PRODUCTS, COURSES, PROFESSIONALS, CATEGORIES, PHASES, AFFILIATES
-    PRODUCTS = _load_yaml("products.yaml")
-    COURSES = _load_yaml("courses.yaml")
-    PROFESSIONALS = _load_yaml("professionals.yaml")
-    CATEGORIES = _load_yaml("categories.yaml")
-    PHASES = _load_yaml("phases.yaml")
-    AFFILIATES = _load_yaml("affiliates.yaml")
-
-
-# Carica i dati all'importazione del file di configurazione
-# _load_custom_data()  # TEMP: disabilitato per debug
-
-
-# ---------------------------------------------------------------------------
-# SEO base
-# ---------------------------------------------------------------------------
-SEO_ENABLED = True
-SITEMAP_INCLUDE_FILELESS = True
-SITEVAR_SECTIONS = ["articoli", "guide", "pagine", "prodotti", "corsi"]
-
-# Paginazione
-DEFAULT_PAGINATION = 6
-PAGINATE = True
+# Varie
+RELATIVE_URLS = False
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
+TRANSLATION_FEED_ATOM = None
+DEFAULT_METADATA = {
+    'lang': 'it',
+    'author': AUTHOR,
+    'description': 'Crescere insieme, spendere meglio. Guide indipendenti per genitori, dal test positivo al 12° mese.',
+}
+SUMMARY_MAX_LENGTH = 45
