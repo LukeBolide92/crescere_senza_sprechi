@@ -23,6 +23,7 @@ jobs:
         run: |
           mkdir -p output
           cp -r theme/templates/* output/
+          rm -f output/README.md
           if [ -d theme/static ]; then cp -r theme/static/* output/; fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
