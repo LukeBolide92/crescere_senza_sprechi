@@ -27,9 +27,8 @@ python -m http.server 8000 --directory theme/templates
 - Non rompere il design mobile (`overflow-y-none`, `overscroll-behavior`, `pb-safe`).
 - Non cancellare o modificare `_nav.html` / altri template parziali (già rimossi; solo 2 template restano).
 - Non committare **nessun** file del progetto finché l'utente non richieda esplicitamente.
-- Se l'utente chiede di spostare/copiare dati: mantenere coerenza tra `theme/static/` e `theme/templates/static/` (ma ora è un solo file in templates).
 
 ## Cosa fare se si rompe il caricamento dati
-1. Verificare che `static/js/weeks-data.js` sia raggiungibile (200) dal server locale.
+1. Verificare che `theme/template/static/js/weeks-data.js` sia raggiungibile (200) dal server locale.
 2. Verificare che nella console del browser non ci sia `SyntaxError` in `advice.html` (spesso manca `})();` o chiusura `<script>`).
 3. Verificare che `advice.html` abbia gli ID (`advice-title`, `box1-title`, etc.) per il popolamento.
