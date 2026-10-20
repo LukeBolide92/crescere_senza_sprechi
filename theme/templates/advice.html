@@ -196,7 +196,7 @@
   let w = parseInt(params.get('settimana') || params.get('week'), 10);
   if (!w || isNaN(w)) w = 21;
   if (w < 1) w = 1;
-  if (w > 42) w = 42;
+  if (w > 52) w = 52;
   const weekStr = w + 'ª';
 
   const isBaby = w > 40;
