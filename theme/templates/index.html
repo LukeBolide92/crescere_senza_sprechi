@@ -208,6 +208,7 @@
   let currentPregMethod = 'dpa';
   let currentWeek = 21;
   let currentDays = 3;
+  let currentBabyMonth = 3; // mese di vita del bambino (0-12)
 
   function initDates() {
     // Set a plausible default DPA around ~19 weeks from now
@@ -231,6 +232,7 @@
     const birthInput = document.getElementById('input-birth');
     if (birthInput) {
       birthInput.value = defaultBirth.toISOString().split('T')[0];
+      currentBabyMonth = computeBabyAge(birthInput.value).months;
     }
   }
 
@@ -363,15 +365,26 @@
     document.getElementById('progress-bar-fill').style.width = percent + '%';
   }
 
-  function calcByBirth(dateString) {
-    if (!dateString) return;
+  // Calcolo età del bambino (mesi + settimane) senza toccare il DOM
+  function computeBabyAge(dateString) {
     const birth = new Date(dateString);
     const today = new Date();
     const diffDays = Math.max(0, Math.round((today - birth) / (1000 * 60 * 60 * 24)));
-
-    const months = Math.floor(diffDays / 30.43);
+    const months = Math.min(12, Math.floor(diffDays / 30.43));
     const remainingDays = Math.floor(diffDays % 30.43);
     const weeks = Math.floor(remainingDays / 7);
+    return { months: months, weeks: weeks, diffDays: diffDays };
+  }
+
+  function calcByBirth(dateString) {
+    if (!dateString) return;
+    const age = computeBabyAge(dateString);
+    const months = age.months;
+    const weeks = age.weeks;
+    const diffDays = age.diffDays;
+
+    // Mappa interna: mese di vita -> "settimana" del range baby (41-52)
+    currentBabyMonth = months;
 
     const ageString = months + ' mesi e ' + weeks + ' settimane';
     document.getElementById('baby-age-display').textContent = ageString;
@@ -385,8 +398,15 @@
   }
 
   function submitMoment() {
-    const week = currentWeek || 21;
-    window.location.href = 'advice.html?settimana=' + week;
+    let target;
+    if (currentMode === 'baby') {
+      // Mese 1 -> settimana 41, mese 2 -> 42, ... mese 12 -> 52
+      const month = Math.max(1, Math.min(12, currentBabyMonth));
+      target = 40 + month;
+    } else {
+      target = Math.max(1, Math.min(52, currentWeek));
+    }
+    window.location.href = 'advice.html?settimana=' + target;
   }
 
   window.addEventListener('DOMContentLoaded', () => {
