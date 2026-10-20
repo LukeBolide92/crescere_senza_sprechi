@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5118b8-5197-4a92-9e75-d7a38000eadb" name="Changes" comment="piccole fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/static/js/weeks-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/theme/static/js/weeks-data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,7 @@
       <updated>1792391812131</updated>
       <workItem from="1792391813073" duration="407000" />
       <workItem from="1792392736687" duration="11301000" />
-      <workItem from="1792419640571" duration="6204000" />
+      <workItem from="1792419640571" duration="7791000" />
     </task>
     <task id="LOCAL-00001" summary="piccole fix">
       <option name="closed" value="true" />
